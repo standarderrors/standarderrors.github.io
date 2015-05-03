@@ -1,0 +1,13 @@
+<div id="nav">
+  <ul>
+    <!-- Whitespace between the </li> and <li> tags causes space to appear between
+         the list items in the rendered page, and we cannot get rid of the space
+         through styling.
+     -->
+     <li <!-- TMPL_IF name="index"    --> class="current" <!-- /TMPL_IF --> ><a href="index.html">Home</a></li
+    ><li <!-- TMPL_IF name="results"  --> class="current" <!-- /TMPL_IF --> ><a href="results.html">Results</a></li
+    ><li <!-- TMPL_IF name="rosters"  --> class="current" <!-- /TMPL_IF --> ><a href="rosters.html">Rosters</a></li
+    ><li <!-- TMPL_IF name="photos"   --> class="current" <!-- /TMPL_IF --> ><a href="photos.html">Photos</a></li
+    ><!--<li <!-- TMPL_IF name="uniforms" --> class="current" <!-- /TMPL_IF --> ><a href="uniforms.html">Uniforms</a></li>-->
+  </ul>
+</div>

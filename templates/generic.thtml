@@ -1,0 +1,19 @@
+<!-- tmpl_include name="html_head.thtml" -->
+
+<!-- tmpl_include name="content_header" -->
+
+<!-- tmpl_include name="content_nav" -->
+
+
+<div id="content">
+
+  <!-- --------------------------------------------
+       Insert content here.
+  <--- ---------------------------------------- -->
+
+</div>
+
+
+<!-- tmpl_include name="content_footer" -->
+
+<!-- tmpl_include name="html_foot" -->

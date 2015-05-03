@@ -1,0 +1,22 @@
+<!-- tmpl_include name="html_head.thtml" -->
+
+<!-- tmpl_include name="content_header.thtml" -->
+
+<!-- tmpl_include name="content_nav.thtml" -->
+
+
+<div id="content">
+
+  <div id="uniforms">
+   <div class="section">
+     <h1><a name="uniforms_2006">2006</a></h1>
+     <img src="images/shirt_2006.png" alt="2006 shirt" width="500" height="324">
+   </div>
+  </div>
+
+</div>
+
+
+<!-- tmpl_include name="content_footer.thtml" -->
+
+<!-- tmpl_include name="html_foot.thtml" -->

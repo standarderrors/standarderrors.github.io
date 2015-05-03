@@ -1,37 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <title>Standard Errors Archives</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<!-- tmpl_include name="html_head.thtml" -->
 
-<body>
+<!-- tmpl_include name="content_header.thtml" -->
 
-
-<div id="header">
-  <!--
-  <h1>Standard Errors</h1>
-  <img id="team_logo" src="images/logo.png" width="105" height="73" alt="[ Logo ]">
-  <img src="images/header.png" width="599" height="95" alt="[ Header ]">
-  -->
-  <h1>Standard Errors</h1>
-</div>
-
-
-<div id="nav">
-  <ul>
-    <!-- Whitespace between the </li> and <li> tags causes space to appear between
-         the list items in the rendered page, and we cannot get rid of the space
-         through styling.
-     -->
-     <li  class="current"  ><a href="index.html">Home</a></li
-    ><li  ><a href="results.html">Results</a></li
-    ><li  ><a href="rosters.html">Rosters</a></li
-    ><li  ><a href="photos.html">Photos</a></li
-    ><!--<li  ><a href="uniforms.html">Uniforms</a></li>-->
-  </ul>
-</div>
-
+<!-- tmpl_include name="content_nav.thtml" -->
 
 
 <div id="content">
@@ -77,12 +48,6 @@
 </div>
 
 
-<div id="footer">
-  <p><a href="http://staffnet.rti.org/wellness/sports/softball.cfm">RTI Softball Homepage</a></p>
-</div>
+<!-- tmpl_include name="content_footer.thtml" -->
 
-
-</body>
-
-</html>
-
+<!-- tmpl_include name="html_foot.thtml" -->

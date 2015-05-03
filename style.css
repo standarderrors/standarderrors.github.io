@@ -1,0 +1,340 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+body {
+  margin: 25px auto;
+  padding: 0px;
+  width: 600px;
+  color: #000000;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #000000;
+}
+
+
+/* --------------------------------------------------------
+ *   Container divs
+ * --------------------------------------------------------
+ */
+
+div#header {
+  margin: 0px;
+  padding: 0px;
+  width: 600px;
+  height: 116px;
+  background-image: url("images/header.png");
+  background-color: #ffffff;
+}
+
+div#header h1 {
+  display: none;
+}
+
+div#content {
+  clear: both;
+  width: 90%;
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+
+div#content h1 {
+  margin-bottom: 0px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 120%;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
+  border-left: solid 10px #800080;
+  border-bottom: solid 1px #800080;
+}
+
+div#content h1 a[name] {
+  color: #800080;
+  background-color: #ffffff;
+}
+
+div#footer {
+  clear: both;
+  padding-top: 20px;
+  border-top: solid 10px #800080;
+  text-align: center;
+}
+
+div.section {
+  clear: both;
+  margin-bottom: 20px;
+
+  /* We need this div to contain its floated elements. According to the
+   * specs, we can do this by setting overflow to hidden. This works in
+   * Firefox but not IE. For IE, we will use the nonstandard behavior
+   * that when height is set to some numeric value, then the div will
+   * stretch to contain its floated elements.
+   */
+  overflow: hidden;
+  height: 100%;
+}
+
+div.image {
+  float: left;
+  width: 105px;
+  height: 120px;
+  margin: 10px;
+  text-align: center;
+}
+
+div.image p.title {
+  font-size: 80%;
+  text-align: center;
+}
+
+
+
+/* --------------------------------------------------------
+ * Navigation bar
+ * --------------------------------------------------------
+ */
+
+div#nav {
+  margin: 0px;
+  padding: 0px;
+  background-color: #800080;
+  color: #ffffff;
+}
+
+div#nav ul {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 2px;
+  list-style-type: none;
+}
+
+div#nav li {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+}
+
+div#nav a {
+  margin: 0px;
+  padding: 0px 5px;
+  text-decoration: none;
+  font-size: 80%;
+  font-weight: bold;
+  background-color: #800080;
+  color: #bbbbbb;
+}
+
+div#nav li.current a {
+  background-color: #800080;
+  color: #ffffff;
+}
+
+div#nav a:hover {
+  background-color: #800080;
+  color: #ffffff;
+}
+
+
+/* --------------------------------------------------------
+ * Sub-navigation bar
+ * --------------------------------------------------------
+ */
+
+ul.subnav {
+  display: none;
+}
+
+
+/* --------------------------------------------------------
+ *   Intro
+ * --------------------------------------------------------
+ */
+
+div#intro p {
+  margin: 0px 0px 15px 0px;
+}
+
+div.launcher {
+  float: left;
+  width: 33%;
+  margin: 10px 0px 25px 0px;
+  text-align: center;
+}
+
+div.launcher p.title {
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  color: #800080;
+  background-color: #ffffff;
+}
+
+div.launcher p.title a {
+  color: #800080;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* --------------------------------------------------------
+ *   Rosters
+ * --------------------------------------------------------
+ */
+
+ul.roster {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+ul.roster li {
+  float: left;
+  width: 50%;
+  margin-left: 0px;
+}
+
+ul.roster span.years {
+  color: #800080;
+  font-size: 90%;
+  font-style: italic;
+}
+
+ul.roster span.note {
+  color: #800080;
+  font-size: 90%;
+  font-style: italic;
+}
+
+
+/* --------------------------------------------------------
+ * Data tables
+ * --------------------------------------------------------
+ */
+
+table {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-collapse: collapse;
+  font-size: 90%;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+caption {
+  display: none;
+  width: 100%;
+  margin: 0px;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 120%;   /* effective font size = caption->font-size * table->font-size */
+  font-weight: bold;
+  border-left: solid 10px #800080;
+  border-bottom: solid 1px #800080;
+}
+
+thead {
+  color: #000000;
+  background-color: #dddddd;
+  border-top: solid 1px #800080;
+  border-bottom: solid 2px #800080;
+}
+
+thead th {
+  font-weight: normal;
+  border-left: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  border-bottom: solid 2px #800080;
+  text-transform: uppercase;
+}
+
+thead th.group_header {
+  font-weight: normal;
+  border-left: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
+  text-transform: uppercase;
+}
+
+tbody th {
+  font-weight: normal;
+}
+
+tbody.overall th {
+  font-weight: bold;
+}
+
+/* IE6 requires us to add td and th to the selector. We should be able to do
+ * just /tbody tr/, but IE cannot add borders to a tr, just a td or th.
+ */
+tbody tr td, tbody tr th {
+  border-bottom: solid 1px #bb88bb;
+}
+
+tbody tr:hover {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+tbody tr.subhead:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* IE6 requires us to add td to the selector since it cannot set padding
+ * or text-align on a tr, but it can for a td. */
+tr.subhead td {
+  padding-top: 5px;
+  text-align: left;
+  font-weight: bold;
+}
+
+tr.ppd {
+  color: #888888;
+  background-color: #ffffff;
+}
+
+td {
+  text-align: center;
+}
+
+tbody.overall td {
+  font-weight: bold;
+}
+
+td.text, th.text  {
+  text-align: left;
+}
+
+tfoot td {
+  font-size: 80%;
+  font-style: italic;
+  text-align: right;
+  border: none;
+}
+
+table span.aka {
+  display: block;
+  margin-left: 1em;
+  font-size: 80%;
+  font-style: italic;
+}
+
+table span.division_size {
+  display: block;
+  font-size: 80%;
+  font-style: italic;
+}
