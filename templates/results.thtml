@@ -85,16 +85,18 @@
         </thead>
   
         <tfoot>
-          <tr><td colspan="6">records through 2013 season</td></tr>
+          <tr><td colspan="6">records through 2014 season</td></tr>
         </tfoot>
   
         <tbody>
+          <tr><th class="text">PHRD Sox</th>
+              <td>1</td> <td>2-0</td> <td>1-0</td> <td>3-0</td> <td>1.000</td></tr>
           <tr><th class="text">S.O.P.</th>
               <td>1</td> <td>1-0</td> <td>0-0</td> <td>1-0</td> <td>1.000</td></tr>
           <tr><th class="text">Swingers</th>
               <td>3</td> <td>5-0</td> <td>0-1</td> <td>5-1</td> <td>0.833</td></tr>
           <tr><th class="text">Corn Wallaces<span class="aka">formerly Field Surveyors</span></th>
-              <td>2</td> <td>4-1</td> <td>1-1</td> <td>5-2</td> <td>0.714</td></tr>
+              <td>3</td> <td>5-2</td> <td>2-1</td> <td>7-3</td> <td>0.700</td></tr>
           <tr><th class="text">Free Radicals</th>
               <td>3</td> <td>3-2</td> <td>1-0</td> <td>4-2</td> <td>0.667</td></tr>
           <tr><th class="text">Hit Squad<span class="aka">formerly Inferno</span><span class="aka">formerly Outkasts</span></th>
@@ -105,19 +107,19 @@
               <td>6</td> <td>1-7</td> <td>3-1</td> <td>4-8</td> <td>0.333</td></tr>
           <tr><th class="text">Diamondbacks</th>
               <td>10</td> <td>5-13</td> <td>0-1</td> <td>5-14</td> <td>0.263</td></tr>
-          <tr><th class="text">Chuck Norris All-Stars</th>
-              <td>6</td> <td>2-8</td> <td>1-1</td> <td>3-9</td> <td>0.250</td></tr>
-          <tr><th class="text">Toxic Waste</th>
-              <td>12</td> <td>6-14</td> <td>0-6</td> <td>6-20</td> <td>0.231</td></tr>
           <tr><th class="text">Loose Cannons<span class="aka">formerly Institute All-Stars</span></th>
-              <td>11</td> <td>5-15</td> <td>1-5</td> <td>6-20</td> <td>0.231</td></tr>
+              <td>12</td> <td>6-16</td> <td>1-5</td> <td>7-21</td> <td>0.250</td></tr>
+          <tr><th class="text">Toxic Waste</th>
+              <td>13</td> <td>7-15</td> <td>0-7</td> <td>7-22</td> <td>0.241</td></tr>
+          <tr><th class="text">Chuck Norris All-Stars</th>
+              <td>7</td> <td>2-10</td> <td>1-2</td> <td>3-12</td> <td>0.200</td></tr>
           <tr><th class="text">Disclaimers</th>
               <td>2</td> <td>0-4</td> <td>0-0</td> <td>0-4</td> <td>0.000</td></tr>
         </tbody>
   
         <tbody class="overall">
           <tr><th class="text">All</th>
-              <td>12</td> <td>46-79</td><td>9-22</td><td>55-101</td><td>0.353</td></tr>
+              <td>13</td> <td>51-84</td><td>11-24</td><td>62-108</td><td>0.365</td></tr>
         </tbody>
       </table>
     </div>
