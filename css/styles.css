@@ -1,0 +1,76 @@
+body {
+    background-color: #eeeeee;
+}
+
+nav {
+    background-color: #ffca28;
+}
+
+nav .brand-logo,
+nav ul a {
+    color: #000000;
+}
+
+.dropdown-content li a {
+    color: #4527a0;
+}
+
+.card-side {
+    width: 30% !important;
+}
+.card-middle {
+    width: 40% !important;
+}
+
+.container {
+    width: 85%;
+    margin-top: 30px;
+}
+
+.card-panel {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0;
+}
+
+.card-panel.large .card-content {
+    height: 500px;
+}
+.card-panel.medium .card-content {
+    height: 400px;
+}
+
+.card-panel .card-title {
+    /*background-color: #4527a0;*/
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-panel p.us,
+.card-panel p.them {
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-panel p.home-away {
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+
+.card-panel p.outcome {
+    background-color: #ffca28;
+    color: #000000;
+    font-size: 150%;
+    text-align: center;
+}
+
+.card-panel p.when {
+    background-color: #4527a0;
+    color: #ffffff;
+    font-size: 120%;
+    text-align: center;
+}
