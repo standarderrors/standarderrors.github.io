@@ -73,7 +73,7 @@ for t in tables:
                     game['outcome'] = outcomes[m.group(1)]
                     game['runs_scored'] = m.group(2)
                     game['runs_allowed'] = m.group(3)
-                    if game['outcome'] == 'L':
+                    if game['outcome'] == 'loss':
                         game['runs_scored'], game['runs_allowed'] = game['runs_allowed'], game['runs_scored']
                     game['forfeit'] = False
                 else:
@@ -83,7 +83,7 @@ for t in tables:
                         game['forfeit'] = False
                         game['runs_scored'] = 7  # by definition
                         game['runs_allowed'] = 0 # by definition
-                        if game['outcome'] == 'L':
+                        if game['outcome'] == 'loss':
                             game['runs_scored'], game['runs_allowed'] = game['runs_allowed'], game['runs_scored']
                     else:
                         print("Unparsed outcome field for played game: " + field_outcome)
