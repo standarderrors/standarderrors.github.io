@@ -7,7 +7,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2001	2001-06-19	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		loss	False	True	False	False	11	18	
 2001	2001-06-28	regular season	True	False	Capitalist Pigs	home	True	False	played	True	False	False		loss	False	True	False	False	5	19	
 2001	2001-07-09	regular season	True	False	Disclaimers	home	True	False	played	True	False	False		loss	False	True	False	False	7	12	
-2001	2001-07-26	regular season	True	False	Toxic Waste	home	True	False	played	True	False	False		loss	False	True	False	False	0	7	
+2001	2001-07-26	regular season	True	False	Toxic Waste	home	True	False	played	True	False	False		loss	False	True	False	True	0	7	
 2001	2001-08-01	regular season	True	False	Free Radicals	home	True	False	played	True	False	False		win	True	False	False	False	18	5	
 2001	2001-08-08	regular season	True	False	Cretins	home	True	False	played	True	False	False		loss	False	True	False	False	8	15	
 2001	2001-08-14	regular season	True	False	Cretins	home	True	False	played	True	False	False		loss	False	True	False	False	12	19	
@@ -17,7 +17,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2002	2002-05-08	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		win	True	False	False	False	10	7	
 2002	2002-05-13	regular season	True	False	Capitalist Pigs	home	True	False	played	True	False	False		win	True	False	False	False	18	12	
 2002	2002-05-20	regular season	True	False	Disclaimers	home	True	False	played	True	False	False		loss	False	True	False	False	8	13	
-2002	2002-06-05	regular season	True	False	Institute All-Stars	home	True	False	played	True	False	False		win	True	False	False	False	7	0	
+2002	2002-06-05	regular season	True	False	Institute All-Stars	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2002	2002-06-10	regular season	True	False	Free Radicals	home	True	False	played	True	False	False		win	True	False	False	False	21	2	
 2002	2002-06-19	regular season	True	False	Cretins	home	True	False	played	True	False	False		win	True	False	False	False	13	10	
 2002	2002-06-27	regular season	True	False	Toxic Waste	home	True	False	played	True	False	False		loss	False	True	False	False	5	18	
@@ -25,7 +25,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2002	2002-07-16	regular season	True	False	Capitalist Pigs	home	True	False	played	True	False	False		loss	False	True	False	False	8	12	
 2002	2002-07-22	regular season	True	False	Disclaimers	home	True	False	played	True	False	False		loss	False	True	False	False	7	8	
 2002	2002-07-31	regular season	True	False	Institute All-Stars	home	True	False	played	True	False	False		loss	False	True	False	False	5	17	
-2002	2002-08-05	regular season	True	False	Free Radicals	home	True	False	played	True	False	False		win	True	False	False	False	7	0	
+2002	2002-08-05	regular season	True	False	Free Radicals	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2002	2002-08-14	regular season	True	False	Cretins	home	True	False	played	True	False	False		win	True	False	False	False	18	10	
 2002	2002-08-22	regular season	True	False	Toxic Waste	home	True	False	played	True	False	False		loss	False	True	False	False	2	21	
 2002	2002-09-10	playoffs	False	True	Cretins	home	True	False	played	True	False	False		win	True	False	False	False	24	15	
@@ -93,7 +93,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2006	2006-08-23	playoffs	False	True	(5) Capitalist Pigs	home	True	False	played	True	False	False		win	True	False	False	False	19	7	
 2006	2006-08-29	playoffs	False	True	(1) Diamondbacks	away	False	True	played	True	False	False		loss	False	True	False	False	3	12	
 2006	2006-09-07	playoffs	False	True	(2) Cretins	away	False	True	played	True	False	False		win	True	False	False	False	9	5	
-2006	2006-09-18	playoffs	False	True	(5) Capitalist Pigs	home	True	False	played	True	False	False		win	True	False	False	False	7	0	
+2006	2006-09-18	playoffs	False	True	(5) Capitalist Pigs	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2006	2006-09-20	playoffs	False	True	(3) Loose Cannons	away	False	True	played	True	False	False		loss	False	True	False	False	8	12	
 2007	2007-05-16	regular season	True	False	Chuck Norris All-Stars	home	True	False	played	True	False	False		loss	False	True	False	False	7	15	
 2007	2007-05-22	regular season	True	False	Loose Cannons	away	False	True	played	True	False	False		loss	False	True	False	False	11	15	
@@ -119,7 +119,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2009	2009-08-31	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		loss	False	True	False	False	10	18	
 2009	2009-09-16	regular season	True	False	Mixed Nutz	away	False	True	played	True	False	False		loss	False	True	False	False	12	13	
 2009	2009-09-23	regular season	True	False	Inferno	away	False	True	postponed	False	True	False	2009-10-13								rain
-2009	2009-09-28	regular season	True	False	Chuck Norris All-Stars	away	False	True	played	True	False	False		loss	False	True	False	False	0	7	
+2009	2009-09-28	regular season	True	False	Chuck Norris All-Stars	away	False	True	played	True	False	False		loss	False	True	False	True	0	7	
 2009	2009-10-06	regular season	True	False	Mixed Nutz	home	True	False	postponed	False	True	False	2009-10-15								rain
 2009	2009-10-13	regular season	True	False	Inferno	away	False	True	played	True	False	False		win	True	False	False	False	17	14	
 2009	2009-10-15	regular season	True	False	Mixed Nutz	home	True	False	postponed	False	True	False	2009-10-20								rain
@@ -144,8 +144,8 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2011	2011-07-18	regular season	True	False	Loose Cannons	away	False	True	played	True	False	False		loss	False	True	False	False	11	16	
 2011	2011-07-20	regular season	True	False	Diamondbacks	home	True	False	postponed	False	True	False	2011-07-25								heat
 2011	2011-07-20	regular season	True	False	Diamondbacks	home	True	False	postponed	False	True	False	2011-07-25								heat
-2011	2011-07-25	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		win	True	False	False	False	7	0	game 1
-2011	2011-07-25	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		win	True	False	False	False	7	0	game 2
+2011	2011-07-25	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		win	True	False	False	True	7	0	game 1
+2011	2011-07-25	regular season	True	False	Diamondbacks	home	True	False	played	True	False	False		win	True	False	False	True	7	0	game 2
 2011	2011-07-27	regular season	True	False	Toxic Waste	away	False	True	played	True	False	False		loss	False	True	False	False	12	15	
 2011	2011-08-04	regular season	True	False	Chuck Norris All-Stars	home	True	False	played	True	False	False		win	True	False	False	False	9	7	
 2011	2011-08-09	regular season	True	False	Mixed Nutz	home	True	False	played	True	False	False		loss	False	True	False	False	6	19	
@@ -155,7 +155,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2012	2012-06-07	regular season	True	False	Field Surveyors	home	True	False	played	True	False	False		win	True	False	False	False	15	9	
 2012	2012-06-12	regular season	True	False	Chuck Norris All-Stars	away	False	True	postponed	False	True	False	2012-06-18								rain
 2012	2012-06-18	regular season	True	False	Chuck Norris All-Stars	away	False	True	played	True	False	False		win	True	False	False	False	20	4	
-2012	2012-06-20	regular season	True	False	Hit Squad	home	True	False	played	True	False	False		win	True	False	False	False	7	0	
+2012	2012-06-20	regular season	True	False	Hit Squad	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2012	2012-06-26	regular season	True	False	Loose Cannons	away	False	True	played	True	False	False		loss	False	True	False	False	6	25	
 2012	2012-07-12	regular season	True	False	Toxic Waste	home	True	False	played	True	False	False		loss	False	True	False	False	7	16	
 2012	2012-07-19	regular season	True	False	Field Surveyors	away	False	True	played	True	False	False		win	True	False	False	False	10	2	6 innings, lightning
@@ -166,7 +166,7 @@ year	date	stage	regular_season	playoffs	opponent	home_away	home	away	status	play
 2012	2012-08-07	regular season	True	False	Loose Cannons	home	True	False	played	True	False	False		loss	False	True	False	False	16	25	8 innings
 2012	2012-08-16	regular season	True	False	Toxic Waste	away	False	True	played	True	False	False		win	True	False	False	False	11	10	
 2012	2012-08-28	playoffs	False	True	(2) Toxic Waste	away	False	True	played	True	False	False		loss	False	True	False	False	5	22	
-2012	2012-08-30	playoffs	False	True	(5) Field Surveyors	home	True	False	played	True	False	False		win	True	False	False	False	7	0	
+2012	2012-08-30	playoffs	False	True	(5) Field Surveyors	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2012	2012-09-11	playoffs	False	True	(1) Loose Cannons	away	False	True	played	True	False	False		loss	False	True	False	False	7	26	
 2013	2013-05-22	regular season	True	False	Toxic Waste	away	False	True	played	True	False	False		loss	False	True	False	False	8	14	
 2013	2013-06-12	regular season	True	False	Corn Wallaces	home	True	False	played	True	False	False		loss	False	True	False	False	7	10	
