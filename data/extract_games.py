@@ -80,7 +80,7 @@ for t in tables:
                     m = re.match(r'([WL]), forfeit', field_outcome)
                     if m:
                         game['outcome'] = outcomes[m.group(1)]
-                        game['forfeit'] = False
+                        game['forfeit'] = True
                         game['runs_scored'] = 7  # by definition
                         game['runs_allowed'] = 0 # by definition
                         if game['outcome'] == 'loss':
