@@ -1,69 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link type="text/css" rel="stylesheet" href="vendor/materialize-v0.96.1/css/materialize.min.css"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="css/styles.css" />
+        <!-- These 3 meta tags *must* come first in the head (per Bootstrap docs). -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Standard Errors</title>
+
+        <link href="vendor/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
     </head>
 
-    <ul id="archive-dropdown" class="dropdown-content">
-        <li><a href="#!">Results</a></li>
-        <li><a href="#!">Rosters</a></li>
-        <li><a href="#!">Photos</a></li>
-    </ul>
-
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Standard Errors</a>
-            <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-button" href="#!" data-activates="archive-dropdown">Archives<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-            </ul>
-        </div>
-    </nav>
-
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col s3 card-side">
-                    <div class="card-panel medium">
-                        <div class="card-content">
-                            <div class="card-title">Previous Game</div>
-                            <p class="us">Standard Errors</p>
-                            <p class="home-away">vs.</p>
-                            <p class="them">Corn Wallaces</p>
-                            <p class="outcome">W, 14-9</p>
-                            <p class="when">Wed, May 6, 5:30pm</p>
-                        </div>
-                    </div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Standard Errors Softball</a>
                 </div>
-                <div class="col s6 card-middle">
-                    <div class="card-panel large">
-                        <div class="card-content">
-                            <div class="card-title">Next Game</div>
-                            <p class="us">Standard Errors</p>
-                            <p class="home-away">vs.</p>
-                            <p class="them">The Ochos</p>
-                            <p class="when">Wed, May 13, 5:30pm</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s3 card-side">
-                    <div class="card-panel medium">
-                        <div class="card-content">
-                            <div class="card-title">Next Game</div>
-                            <p class="us">Standard Errors</p>
-                            <p class="home-away">at</p>
-                            <p class="them">PHRD Sox</p>
-                            <p class="when">Wed, May 20, 5:30pm</p>
-                        </div>
-                    </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="results.html">Results</a></li>
+                        <li><a href="rosters.html">Rosters</a></li>
+                        <li><a href="photos.html">Photos</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+
+        <div class="container">
+
+            <div id="schedule"></div>
+
         </div>
 
-        <script type="text/javascript" src="vendor/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="vendor/materialize-v0.96.1/js/materialize.min.js"></script>
+        <script src="vendor/d3-3.5.6/d3.min.js"></script>
+        <script src="vendor/jquery-2.1.4/jquery.min.js"></script>
+        <script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+        <script src="vendor/moment-2.10.3/moment.min.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

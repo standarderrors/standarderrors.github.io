@@ -1,76 +1,56 @@
-body {
-    background-color: #eeeeee;
-}
-
-nav {
-    background-color: #ffca28;
-}
-
-nav .brand-logo,
-nav ul a {
-    color: #000000;
-}
-
-.dropdown-content li a {
-    color: #4527a0;
-}
-
-.card-side {
-    width: 30% !important;
-}
-.card-middle {
-    width: 40% !important;
-}
-
-.container {
-    width: 85%;
-    margin-top: 30px;
-}
-
-.card-panel {
+.navbar-default {
     background-color: #ffffff;
-    color: #000000;
-    padding: 0;
+    border-radius: 0;
+    border-bottom: 4px solid rgb(255,202,40);
 }
 
-.card-panel.large .card-content {
-    height: 500px;
-}
-.card-panel.medium .card-content {
-    height: 400px;
+#schedule {
+    width: 60%;
 }
 
-.card-panel .card-title {
-    /*background-color: #4527a0;*/
-    background-color: #000000;
+#schedule h1 {
+    color: #777777;
+    font-size: 120%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+#schedule ul {
+    padding: 0px;
+}
+
+#schedule li {
+    list-style-type: none;
+    margin: 6px 0px;
+    padding: 6px;
+    border: 1px solid #aaaaaa;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+#schedule li.win {
+    background-color: rgb(255,202,40);
+}
+
+#schedule li.loss {
+    background-color: #dddddd;
+}
+
+#schedule .next-game li.next {
+    background-color: rgb(107,67,205);
     color: #ffffff;
     font-weight: bold;
+}
+
+#schedule .opponent {
     text-align: center;
 }
 
-.card-panel p.us,
-.card-panel p.them {
-    font-size: 200%;
-    font-weight: bold;
-    text-align: center;
+#schedule .date {
+    text-align: left;
 }
 
-.card-panel p.home-away {
-    font-weight: bold;
-    font-size: 120%;
-    text-align: center;
-}
-
-.card-panel p.outcome {
-    background-color: #ffca28;
-    color: #000000;
-    font-size: 150%;
-    text-align: center;
-}
-
-.card-panel p.when {
-    background-color: #4527a0;
-    color: #ffffff;
-    font-size: 120%;
-    text-align: center;
+#schedule .result {
+    text-align: right;
 }
