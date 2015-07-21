@@ -54,3 +54,40 @@
 #schedule .result {
     text-align: right;
 }
+
+#schedule .info-icon {
+    color: #555555;
+    margin-left: 6px;
+    vertical-align: text-top;
+    cursor: default;
+}
+
+.note-tip {
+    /* Position the tooltip just above and to the left of the triggering element.
+       This assumes that the tooltip's left and top properties have been set
+       dynamically such that the tooltip's left is aligned with the trigger's
+       right and the tooltip's top is aligned with the trigger's top. Use
+       translateY(-100%) to move the tooltip upwards by a distance equal to its
+       height (that is, to move it completely above the trigger). Its support
+       for percentage translations takes care of the fact that we don't know the
+       tooltip's height, which would be a problem if we tried to use something
+       like a negative margin to move it above the trigger. */
+    position: absolute;
+    margin-left: 2px;
+    transform: translateY(-100%);
+
+    /* In case we decide to make the tooltip overlap its triggering element,
+       disabling pointer events will prevent a "flashing" effect when the mouse
+       is over both. */
+    pointer-events: none;
+
+    padding: 6px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid 1px #444444;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}

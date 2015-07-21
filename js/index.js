@@ -47,6 +47,12 @@ d3.tsv('../data/games.tsv', function(error, games) {
         futureGames[0].next = true;
     }
 
+    // Add a div that will be used as a tooltip for game result notes.
+    var noteTip = d3.select('body')
+        .append('div')
+        .attr('class', 'note-tip hidden')
+    ;
+
     function addGameList(condition, className, title) {
         var listGames = currentGames.filter(condition);
         if (listGames.length === 0) return;
@@ -129,6 +135,31 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 else {
                     return '5:30pm';
                 }
+            })
+        ;
+
+        //----------------------------------------------------------------------
+        // Add an icon with a tooltip for any game result notes.
+
+        var notes = schedule.selectAll('.result')
+            .filter(function(d) { return d.note !== ''; })
+            .append('span')
+            .attr('class', 'info-icon glyphicon glyphicon-info-sign')
+            .on('mouseover', function(d) {
+                // See the discussion in the stylesheet for where the tooltip
+                // should be positioned.
+                var icon = $(this);
+                noteTip
+                    .text(d.note)
+                    .classed('hidden', false)
+                    .style('left', (icon.offset().left + icon.outerWidth()) + 'px')
+                    .style('top', icon.offset().top + 'px')
+                ;
+            })
+            .on('mouseout', function(d) {
+                noteTip
+                    .classed('hidden', true)
+                ;
             })
         ;
     }
