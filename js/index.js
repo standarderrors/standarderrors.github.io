@@ -47,7 +47,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
         futureGames[0].next = true;
     }
 
-    // Add a div that will be used as a tooltip for game result notes.
+    // Add a div that will be used as a tooltip for game result notes. We can't
+    // use the d3-tip library for this, because that only works with SVG
+    // elements.
     var noteTip = d3.select('body')
         .append('div')
         .attr('class', 'note-tip hidden')
