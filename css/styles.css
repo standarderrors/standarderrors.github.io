@@ -1,6 +1,20 @@
-html, body {
+html {
+    /* Force the baseline font size to match the user's browser preference. All
+       other font sizes should be defined relative to this, no pixel units. This
+       overrides the bootstrap default of a fixed 14px. */
+    font-size: 100%;
+}
+
+body {
     font-family: sans-serif;
-    font-size: 12px;
+    /* Set the page's default font size under the assumption that the vast majority
+       of users have their preferred font size set to the browser default of
+       16px. For the users who have changed the default, or those who explicitly
+       want 16px, we will be scaling the font size away from the their
+       preference. This isn't ideal. However, because most websites make this
+       same assumption of a 16px default and change the font accordingly, those
+       users should be accustmed to this behavior. */
+    font-size: 87.5%;
 }
 
 .navbar-default {
@@ -15,7 +29,7 @@ html, body {
 
 #schedule h1 {
     color: #777777;
-    font-size: 120%;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     padding-left: 20px;
