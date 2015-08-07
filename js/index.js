@@ -96,7 +96,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .classed('col-xs-12', true)
             .classed('col-md-6', true)
             .html(function(d) {
-                return d.opponent;
+                var opponent = d.opponent;
+                if (d.away) {
+                    opponent = '@ ' + opponent;
+                }
+                return opponent;
             })
         ;
         game
