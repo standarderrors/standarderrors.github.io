@@ -160,4 +160,46 @@ d3.tsv('../data/games.tsv', function(error, games) {
     addGameList(function(d) { return d.next; }, 'next-game', 'Next Game');
     addGameList(function(d) { return d.regularSeason; }, 'regular-season', 'Regular Season ' + currentYear);
     addGameList(function(d) { return d.playoffs; }, 'playoffs', 'Playoffs');
+
+
+    //--------------------------------------------------------------------------
+    // Add an image collage.
+
+
+    d3.tsv('../data/images.tsv', function(error, allImages) {
+        var numImages = 6;
+        var images = [];
+        for (var i = 0; i < numImages; i++) {
+            var k = allImages.length;
+            var j = Math.floor(k * Math.random());
+            images = images.concat(allImages.splice(j, 1));
+        }
+
+        $('#collage').height($('#schedule').height());
+
+        collager().arrange({
+            objects: images,
+            containerWidth: $('#collage').width(),
+            containerHeight: $('#collage').height() - $('#schedule h1:first-child').outerHeight(true),
+            hPaddingInner: 15,
+            vPaddingInner: 15
+        });
+
+        var fmt = d3.format('.1f');
+
+        var offsetTop = $('#schedule h1:first-child').outerHeight(true);
+        var offsetLeft = parseInt($('#collage').css('padding-left'));
+
+        d3.select('#collage').selectAll('img')
+            .data(images)
+            .enter()
+            .append('img')
+            .attr('src', function(d) { return '/images/' + d.year + '/' + d.filename; })
+            .attr('width', function(d) { return fmt(d.collagerWidth); })
+            .attr('height', function(d) { return fmt(d.collagerHeight); })
+            .style('position', 'absolute')
+            .style('top', function(d) { return fmt(offsetTop + d.collagerTop) + 'px'; })
+            .style('left', function(d) { return fmt(offsetLeft + d.collagerLeft) + 'px'; })        
+        ;
+    });
 });

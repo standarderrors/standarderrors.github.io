@@ -23,10 +23,6 @@ body {
     border-bottom: 4px solid rgb(255,202,40);
 }
 
-#schedule {
-    width: 60%;
-}
-
 #schedule h1 {
     color: #777777;
     font-size: 1.2rem;
