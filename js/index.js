@@ -193,13 +193,23 @@ d3.tsv('../data/games.tsv', function(error, games) {
         d3.select('#collage').selectAll('img')
             .data(images)
             .enter()
+            .append('a')
+            .attr('href', function(d) { return '/images/' + d.year + '/' + d.filename; })
             .append('img')
             .attr('src', function(d) { return '/images/' + d.year + '/' + d.filename; })
             .attr('width', function(d) { return fmt(d.collagerWidth); })
             .attr('height', function(d) { return fmt(d.collagerHeight); })
             .style('position', 'absolute')
             .style('top', function(d) { return fmt(offsetTop + d.collagerTop) + 'px'; })
-            .style('left', function(d) { return fmt(offsetLeft + d.collagerLeft) + 'px'; })        
+            .style('left', function(d) { return fmt(offsetLeft + d.collagerLeft) + 'px'; })
+            .attr('title', function(d) { return d.description + ' (' + d.year + ')'; })
+            .attr('data-toggle', 'tooltip')
+            .each(function() {
+                // Activate the Bootstrap tooltip.
+                $(this).tooltip({
+                    container: 'body'
+                });
+            })       
         ;
     });
 });
