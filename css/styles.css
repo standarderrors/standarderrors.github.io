@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
 html {
     /* Force the baseline font size to match the user's browser preference. All
        other font sizes should be defined relative to this, no pixel units. This
@@ -17,10 +19,65 @@ body {
     font-size: 87.5%;
 }
 
-.navbar-default {
-    background-color: #ffffff;
-    border-radius: 0;
-    border-bottom: 4px solid rgb(255,202,40);
+#header {
+    width: 100%;
+    margin: 0px;
+    padding-left: 30px;
+    background-color: #eeeeee;
+}
+
+#header a {
+    color: rgb(107,67,205);
+    text-decoration: none;
+}
+
+#header img.logo {
+    height: 64px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.site-title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-family: "Noto Sans", sans-serif;
+    white-space: nowrap;
+}
+
+/* By default, position the page links in a horizontal row below the site title.
+ */
+
+ul.page-links {
+    padding-left: 0;
+    float: right;
+}
+
+ul.page-links li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: right;
+}
+
+/* When there's enough room, move the page links to a vertical column beside the
+ * site title.
+ */
+
+@media (min-width: 768px) {
+    .site-title {
+        margin-bottom: 20px;
+    }
+
+    ul.page-links {
+        padding-right: 15px;
+        margin-top: 15px;
+        line-height: 1.6;
+    }
+
+    ul.page-links li {
+        width: 100%;
+    }
 }
 
 #schedule h1 {
