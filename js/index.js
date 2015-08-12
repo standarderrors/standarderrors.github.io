@@ -85,7 +85,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .append('div')
             .classed('date', true)
             .classed('col-xs-12', true)
-            .classed('col-md-3', true)
+            .classed('col-sm-3', true)
             .html(function(d) {
                 return d.date.format('ddd, MMM D');
             })
@@ -94,7 +94,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .append('div')
             .classed('opponent', true)
             .classed('col-xs-12', true)
-            .classed('col-md-6', true)
+            .classed('col-sm-6', true)
             .html(function(d) {
                 var opponent = d.opponent;
                 if (d.away) {
@@ -107,7 +107,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .append('div')
             .classed('result', true)
             .classed('col-xs-12', true)
-            .classed('col-md-3', true)
+            .classed('col-sm-3', true)
             .html(function(d) {
                 if (d.played) {
                     var result = '';
