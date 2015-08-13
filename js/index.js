@@ -204,6 +204,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .style('left', function(d) { return fmt(offsetLeft + d.collagerLeft) + 'px'; })
             .attr('title', function(d) { return d.description + ' (' + d.year + ')'; })
             .attr('data-toggle', 'tooltip')
+            .attr('data-container', 'body')
             .each(function() {
                 // Activate the Bootstrap tooltip.
                 $(this).tooltip({
