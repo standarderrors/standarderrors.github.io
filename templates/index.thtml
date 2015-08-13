@@ -13,22 +13,24 @@
     </head>
 
     <body>
-        <div id="header" class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-9">
-                    <div class="site-title">
-                        <a href="index.html">
-                            <img class="logo" src="images/logo-2014-purple.png" alt="Standard Errors logo"/>
-                            <span>Standard Errors Softball</span>
-                        </a>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="site-title">
+                            <a href="index.html">
+                                <img class="logo" src="images/logo-2014-purple.png" alt="Standard Errors logo"/>
+                                <span>Standard Errors Softball</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <ul class="page-links">
-                        <li><a href="results.html">Results <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                        <li><a href="rosters.html">Rosters <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                        <li><a href="photos.html">Photos <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                    </ul>
+                    <div class="col-xs-12 col-sm-3">
+                        <ul class="page-links">
+                            <li><a href="results.html">Results <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                            <li><a href="rosters.html">Rosters <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                            <li><a href="photos.html">Photos <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
