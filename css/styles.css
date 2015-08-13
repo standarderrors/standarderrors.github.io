@@ -80,6 +80,10 @@ ul.page-links li {
     }
 }
 
+.page-links .glyphicon {
+    margin-left: 0.25em;
+}
+
 #schedule h1 {
     color: #777777;
     font-size: 1.2rem;
