@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+html {
+    /* Force the baseline font size to match the user's browser preference. All
+       other font sizes should be defined relative to this, no pixel units. This
+       overrides the bootstrap default of a fixed 14px. */
+    font-size: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    /* Set the page's default font size under the assumption that the vast majority
+       of users have their preferred font size set to the browser default of
+       16px. For the users who have changed the default, or those who explicitly
+       want 16px, we will be scaling the font size away from the their
+       preference. This isn't ideal. However, because most websites make this
+       same assumption of a 16px default and change the font accordingly, those
+       users should be accustmed to this behavior. */
+    font-size: 87.5%;
+}
+
+#header {
+    width: 100%;
+    margin: 0px;
+    padding-left: 30px;
+    background-color: #eeeeee;
+}
+
+#header a {
+    color: rgb(107,67,205);
+    text-decoration: none;
+}
+
+#header img.logo {
+    height: 64px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.site-title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-family: "Noto Sans", sans-serif;
+    white-space: nowrap;
+}
+
+/* By default, position the page links in a horizontal row below the site title.
+ */
+
+ul.page-links {
+    padding-left: 0;
+    float: right;
+}
+
+ul.page-links li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: right;
+}
+
+/* When there's enough room, move the page links to a vertical column beside the
+ * site title.
+ */
+
+@media (min-width: 768px) {
+    .site-title {
+        margin-bottom: 20px;
+    }
+
+    ul.page-links {
+        padding-right: 15px;
+        margin-top: 15px;
+        line-height: 1.6;
+    }
+
+    ul.page-links li {
+        width: 100%;
+    }
+}
+
+.page-links .glyphicon {
+    margin-left: 0.25em;
+}
+
+#schedule h1 {
+    color: #777777;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+#schedule ul {
+    padding: 0px;
+}
+
+#schedule li {
+    list-style-type: none;
+    margin: 6px 0px;
+    padding: 6px;
+    border: 1px solid #aaaaaa;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+#schedule li.win {
+    background-color: rgb(255,202,40);
+}
+
+#schedule li.loss {
+    background-color: #dddddd;
+}
+
+#schedule .next-game li.next {
+    background-color: rgb(107,67,205);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#schedule .opponent {
+    text-align: center;
+}
+
+#schedule .date {
+    text-align: left;
+}
+
+#schedule .result {
+    text-align: right;
+}
+
+#schedule .info-icon {
+    color: #555555;
+    margin-left: 6px;
+    vertical-align: text-top;
+    cursor: default;
+}
+
+.tooltip .tooltip-inner {
+    max-width: 320px;
+    font-size: 0.9rem;
+    background-color: rgba(16,16,16,0.9);
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: rgba(16,16,16,0.9);
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: rgba(16,16,16,0.9);
+}
+
+.hidden {
+    display: none;
+}

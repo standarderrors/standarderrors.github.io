@@ -1,53 +1,54 @@
-<!-- tmpl_include name="html_head.thtml" -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- These 3 meta tags *must* come first in the head (per Bootstrap docs). -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- tmpl_include name="content_header.thtml" -->
+        <title>Standard Errors</title>
 
-<!-- tmpl_include name="content_nav.thtml" -->
+        <link href="vendor/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
 
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="site-title">
+                            <a href="index.html">
+                                <img class="logo" src="images/logo-2014-purple.png" alt="Standard Errors logo"/>
+                                <span>Standard Errors Softball</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <ul class="page-links">
+                            <li><a href="results.html">Results <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                            <li><a href="rosters.html">Rosters <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                            <li><a href="photos.html">Photos <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div id="content">
+        <div class="container">
+            <div class="row">
+                <div id="schedule" class="col-xs-12 col-md-7">
+                </div>
+                <div id="collage" class="col-xs-12 col-md-5">
+                </div>
+            </div>
+        </div>
 
-  <div id="intro">
-    <p>
-    Welcome to the Standard Errors Archives! This website chronicles the history
-    of the Standard Errors, an RTI softball team centered in StatEpi. Here you will
-    find all the scores, all the names, and all the pictures of your favorite softball
-    team.
-    </p>
-
-    <div class="launcher">
-      <p class="title"><a href="results.html">Results</a></p>
-      <a href="results.html"><img src="images/clip-results.png" alt="" width="100" height="79"></a>
-    </div>
-
-    <div class="launcher">
-      <p class="title"><a href="rosters.html">Rosters</a></p>
-      <a href="rosters.html"><img src="images/clip-rosters.png" alt="" width="100" height="84"></a>
-    </div>
-
-    <div class="launcher">
-      <p class="title"><a href="photos.html">Photos</a></p>
-      <a href="photos.html"><img src="images/clip-photos.png" alt="" width="100" height="94"></a>
-    </div>
-
-    <!--
-    <div class="launcher">
-      <p class="title"><a href="uniforms.html">Uniforms</a></p>
-      <a href="uniforms.html"><img src="images/clip-uniforms.png" alt="" width="100" height="94"></a>
-    </div>
-    -->
-
-    <p>
-    Another team known as the Standard Errors and centered in the Statistics
-    department reportedly played in the RTI league sometime in the 1980's.
-    Unfortunately, no other details are known about that team.
-    </p>
-
-  </div>
-
-</div>
-
-
-<!-- tmpl_include name="content_footer.thtml" -->
-
-<!-- tmpl_include name="html_foot.thtml" -->
+        <script src="vendor/d3-3.5.6/d3.min.js"></script>
+        <script src="vendor/jquery-2.1.4/jquery.min.js"></script>
+        <script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+        <script src="vendor/moment-2.10.3/moment.min.js"></script>
+        <script src="vendor/collager-1/collager.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
