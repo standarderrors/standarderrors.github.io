@@ -6,13 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Standard Errors</title>
+        <title>{% block title %}{% endblock %}</title>
 
         <link href="vendor/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
-        
-    <link href="css/schedule.css" rel="stylesheet">
-
+        {% block styles %}
+        {% endblock %}
     </head>
 
     <body>
@@ -39,25 +38,14 @@
             </div>
         </div>
 
-        
-    <div class="container">
-        <div class="row">
-            <div id="schedule" class="col-xs-12 col-md-7">
-            </div>
-            <div id="collage" class="col-xs-12 col-md-5">
-            </div>
-        </div>
-    </div>
-
+        {% block content %}
+        {% endblock %}
 
         <script src="vendor/d3-3.5.6/d3.min.js"></script>
         <script src="vendor/jquery-2.1.4/jquery.min.js"></script>
         <script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-        
-    <script src="vendor/moment-2.10.3/moment.min.js"></script>
-    <script src="vendor/collager-1/collager.js"></script>
-    <script src="js/index.js"></script>
-
+        {% block scripts %}
+        {% endblock %}
 
     </body>
 </html>

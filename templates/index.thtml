@@ -1,55 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- These 3 meta tags *must* come first in the head (per Bootstrap docs). -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "base.thtml" %}
 
-        <title>Standard Errors</title>
+{% block title %}Standard Errors{% endblock %}
 
-        <link href="vendor/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-    </head>
+{% block styles %}
+    <link href="css/schedule.css" rel="stylesheet">
+{% endblock %}
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-9">
-                        <div class="site-title">
-                            <a href="index.html">
-                                <img class="logo" src="images/logo-2014-purple.png" alt="Standard Errors logo"/>
-                                <span class="long-title">Standard Errors Softball</span>
-                                <span class="short-title">Standard Errors</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <ul class="page-links">
-                            <li><a href="results.html">Results <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                            <li><a href="rosters.html">Rosters <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                            <li><a href="photos.html">Photos <span class="glyphicon glyphicon-circle-arrow-right"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div id="schedule" class="col-xs-12 col-md-7">
+            </div>
+            <div id="collage" class="col-xs-12 col-md-5">
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div id="schedule" class="col-xs-12 col-md-7">
-                </div>
-                <div id="collage" class="col-xs-12 col-md-5">
-                </div>
-            </div>
-        </div>
-
-        <script src="vendor/d3-3.5.6/d3.min.js"></script>
-        <script src="vendor/jquery-2.1.4/jquery.min.js"></script>
-        <script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-        <script src="vendor/moment-2.10.3/moment.min.js"></script>
-        <script src="vendor/collager-1/collager.js"></script>
-        <script src="js/index.js"></script>
-    </body>
-</html>
+    </div>
+{% endblock %}
+        
+{% block scripts %}
+    <script src="vendor/moment-2.10.3/moment.min.js"></script>
+    <script src="vendor/collager-1/collager.js"></script>
+    <script src="js/index.js"></script>
+{% endblock %}

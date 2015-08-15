@@ -132,60 +132,6 @@ ul.page-links li {
     }
 }
 
-#schedule h1 {
-    color: #777777;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding-left: 20px;
-}
-
-#schedule ul {
-    padding: 0px;
-}
-
-#schedule li {
-    list-style-type: none;
-    margin: 6px 0px;
-    padding: 6px;
-    border: 1px solid #aaaaaa;
-    border-radius: 6px;
-    background-color: #ffffff;
-}
-
-#schedule li.win {
-    background-color: rgb(255,202,40);
-}
-
-#schedule li.loss {
-    background-color: #dddddd;
-}
-
-#schedule .next-game li.next {
-    background-color: rgb(107,67,205);
-    color: #ffffff;
-    font-weight: bold;
-}
-
-#schedule .opponent {
-    text-align: center;
-}
-
-#schedule .date {
-    text-align: left;
-}
-
-#schedule .result {
-    text-align: right;
-}
-
-#schedule .info-icon {
-    color: #555555;
-    margin-left: 6px;
-    vertical-align: text-top;
-    cursor: default;
-}
-
 .tooltip .tooltip-inner {
     max-width: 320px;
     font-size: 0.9rem;
