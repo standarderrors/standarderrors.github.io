@@ -202,7 +202,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .style('position', 'absolute')
             .style('top', function(d) { return fmt(offsetTop + d.collagerTop) + 'px'; })
             .style('left', function(d) { return fmt(offsetLeft + d.collagerLeft) + 'px'; })
-            .attr('title', function(d) { return d.description + ' (' + d.year + ')'; })
+            .attr('title', function(d) { return d.title + ' (' + d.year + ')'; })
             .attr('data-toggle', 'tooltip')
             .attr('data-container', 'body')
             .each(function() {
