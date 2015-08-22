@@ -1,8 +1,13 @@
-<!-- tmpl_include name="html_head.thtml" -->
+{% extends "base.thtml" %}
 
-<!-- tmpl_include name="content_header.thtml" -->
+{% block title %}Standard Errors Game Results{% endblock %}
 
-<!-- tmpl_include name="content_nav.thtml" -->
+{% block styles %}
+    <link href="css/schedule.css" rel="stylesheet">
+    <link href="css/results.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
 
 
 <div id="content">
@@ -642,7 +647,9 @@
 
 </div>
 
-
-<!-- tmpl_include name="content_footer.thtml" -->
-
-<!-- tmpl_include name="html_foot.thtml" -->
+{% endblock %}
+        
+{% block scripts %}
+    <script src="vendor/moment-2.10.3/moment.min.js"></script>
+    <script src="js/results.js"></script>
+{% endblock %}

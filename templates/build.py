@@ -7,7 +7,8 @@ output_dir = Path.cwd().parent
 env = Environment(loader = FileSystemLoader(searchpath = str(template_dir)))
 
 views = [
-    'index'
+    'index',
+    'results'
 ]
 
 for view in views:
