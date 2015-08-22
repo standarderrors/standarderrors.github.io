@@ -27,6 +27,10 @@
     background-color: #dddddd;
 }
 
+#schedule li.postponed {
+    color: #aaaaaa;
+}
+
 #schedule .next-game li.next {
     background-color: rgb(107,67,205);
     color: #ffffff;
@@ -50,4 +54,8 @@
     margin-left: 6px;
     vertical-align: text-top;
     cursor: default;
+}
+
+#schedule li.postponed .info-icon {
+    color: #777777;
 }
