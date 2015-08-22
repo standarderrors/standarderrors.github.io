@@ -167,7 +167,7 @@ fields = [
     'note'
 ]
 
-with open('games.tsv', 'w') as f:
+with open('games.tsv', 'w', newline = '\n') as f:
     writer = csv.DictWriter(f, fields, dialect = 'excel-tab')
     writer.writeheader()
     writer.writerows(games)
