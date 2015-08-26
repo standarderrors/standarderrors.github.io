@@ -167,12 +167,26 @@ d3.tsv('../data/games.tsv', function(error, games) {
 
 
     d3.tsv('../data/images.tsv', function(error, allImages) {
-        var numImages = 6;
+        allImages.forEach(function(d) {
+            d.weight = +d.weight;
+        });
+
+        // Select a subset of images from the full set using a weighted sampling
+        // procedure.
+        var numSampledImages = 6;
         var images = [];
-        for (var i = 0; i < numImages; i++) {
-            var k = allImages.length;
-            var j = Math.floor(k * Math.random());
-            images = images.concat(allImages.splice(j, 1));
+        for (var i = 0; i < numSampledImages; i++) {
+            var weightSum = d3.sum(allImages, function(d) { return d.weight; });
+            var rand = weightSum * Math.random();
+
+            var runningWeight = 0;
+            for (var j = 0; j < allImages.length; j++) {
+                runningWeight += allImages[j].weight;
+                if (rand < runningWeight) {
+                    images = images.concat(allImages.splice(j, 1));
+                    break;
+                }
+            }
         }
 
         $('#collage').height($('#schedule').height());
