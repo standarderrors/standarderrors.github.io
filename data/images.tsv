@@ -1,20 +1,20 @@
-year	filename	width	height	title	description
-2001	celebration.jpg	407	223	Celebration after first win	Celebration after first win. Joey Morris, Peter Frechtel, Katie Bowman, Elvessa Aragon, Lisa Strader, Joe McMichael, Vanessa Rommelman, Scott Scheffler.
-2001	joe.jpg	600	450	Joe McMichael	Joe McMichael
-2001	karaoke.jpg	205	333	Peter Frechtel giving love a bad name	Peter Frechtel giving love a bad name. Celebration after first win.
-2001	lorrie.jpg	350	654	Lorrie Gallego	Lorrie Gallego
-2002	burton.jpg	482	600	Burton Levine	Burton Levine
-2002	chuck.jpg	454	508	Chuck Copello	Chuck Copello
-2002	joey2.jpg	436	600	Joey Morris	Joey Morris
-2002	katie.jpg	546	490	Katie Bowman	Katie Bowman
-2002	peter.jpg	539	600	Peter Frechtel	Peter Frechtel
-2004	liz.jpg	358	600	Liz Copello	Liz Copello
-2005	angela2.jpg	375	600	Angela Pitts	Angela Pitts
-2005	harper.jpg	463	600	Harper Gordek	Harper Gordek
-2005	jeff.jpg	600	575	Jeff Laufenberg	Jeff Laufenberg
-2005	penne.jpg	534	640	Mike Penne	Mike Penne
-2006	black.jpg	346	600	Steve Black	Steve Black
-2006	jeremy.jpg	286	600	Jeremy Porter	Jeremy Porter
-2006	richard.jpg	439	600	Richard Kwok	Richard Kwok
-2007	team.jpg	800	456	Team photo	Team photo. First row: Jen Gratton, Harper Gordek, Andy Clarke, Mike Penne, Liz Copello, Jeremy Porter, Tara Boyette. Second row: Darryl Cooney, Heather Meier, Becky Lane, Angelina Salas, Matt Bensen. Third row: John Hajdin, Chuck Copello, James Francisco, Ben Dalton, Hillary Zelko.
-2014	mercy.jpg	960	684	Celebration after beating the Loose Cannons by the mercy rule	Celebration after beating the Loose Cannons by the mercy rule. First row: Glynis Ewing, Liz Copello, Cynthia Augustine, Jess Roycroft. Second row: Greg Cooksey, Chuck Copello, Chris Kruger, Derick Brown, Caroline Blanton, Joey Morris, Michael Hieronymous.
+year	filename	weight	width	height	title	description
+2001	celebration.jpg	1	407	223	Celebration after first win	Celebration after first win. Joey Morris, Peter Frechtel, Katie Bowman, Elvessa Aragon, Lisa Strader, Joe McMichael, Vanessa Rommelman, Scott Scheffler.
+2001	joe.jpg	1	600	450	Joe McMichael	Joe McMichael
+2001	karaoke.jpg	1	205	333	Peter Frechtel giving love a bad name	Peter Frechtel giving love a bad name. Celebration after first win.
+2001	lorrie.jpg	1	350	654	Lorrie Gallego	Lorrie Gallego
+2002	burton.jpg	1	482	600	Burton Levine	Burton Levine
+2002	chuck.jpg	1	454	508	Chuck Copello	Chuck Copello
+2002	joey2.jpg	1	436	600	Joey Morris	Joey Morris
+2002	katie.jpg	1	546	490	Katie Bowman	Katie Bowman
+2002	peter.jpg	1	539	600	Peter Frechtel	Peter Frechtel
+2004	liz.jpg	1	358	600	Liz Copello	Liz Copello
+2005	angela2.jpg	1	375	600	Angela Pitts	Angela Pitts
+2005	harper.jpg	1	463	600	Harper Gordek	Harper Gordek
+2005	jeff.jpg	1	600	575	Jeff Laufenberg	Jeff Laufenberg
+2005	penne.jpg	1	534	640	Mike Penne	Mike Penne
+2006	black.jpg	1	346	600	Steve Black	Steve Black
+2006	jeremy.jpg	1	286	600	Jeremy Porter	Jeremy Porter
+2006	richard.jpg	1	439	600	Richard Kwok	Richard Kwok
+2007	team.jpg	1	800	456	Team photo	Team photo. First row: Jen Gratton, Harper Gordek, Andy Clarke, Mike Penne, Liz Copello, Jeremy Porter, Tara Boyette. Second row: Darryl Cooney, Heather Meier, Becky Lane, Angelina Salas, Matt Bensen. Third row: John Hajdin, Chuck Copello, James Francisco, Ben Dalton, Hillary Zelko.
+2014	mercy.jpg	1	960	684	Celebration after beating the Loose Cannons by the mercy rule	Celebration after beating the Loose Cannons by the mercy rule. First row: Glynis Ewing, Liz Copello, Cynthia Augustine, Jess Roycroft. Second row: Greg Cooksey, Chuck Copello, Chris Kruger, Derick Brown, Caroline Blanton, Joey Morris, Michael Hieronymous.
