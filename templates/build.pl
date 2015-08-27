@@ -11,7 +11,6 @@ my $dir_template = ".";
 my $dir_output = "..";
 
 my @pages = (
-             { name => "index",    title => "Standard Errors Archives" },
              { name => "results",  title => "Standard Errors Archives: Results" },
              { name => "rosters",  title => "Standard Errors Archives: Rosters" },
              { name => "photos",   title => "Standard Errors Archives: Photos" },
