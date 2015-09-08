@@ -79,11 +79,6 @@ for i in input:
 
     g['note'] = i['note']
 
-    # Temporarily match a bug in the original program.
-    if g['home_away'] is None: g['home_away'] = 'home'
-    if g['home'] is None: g['home'] = True
-    if g['away'] is None: g['away'] = False
-
     # Temporarily combine the seed and opponent name to match the original program.
     if g['opponent_seed'] is not None:
         g['opponent'] = '({}) {}'.format(g['opponent_seed'], g['opponent'])
