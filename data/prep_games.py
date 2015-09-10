@@ -79,10 +79,6 @@ for i in input:
 
     g['note'] = i['note']
 
-    # Temporarily combine the seed and opponent name to match the original program.
-    if g['opponent_seed'] is not None:
-        g['opponent'] = '({}) {}'.format(g['opponent_seed'], g['opponent'])
-
     games.append(g)
 
 games = sorted(games, key = lambda g: g['date'])
@@ -94,6 +90,8 @@ fields = [
     'regular_season',
     'playoffs',
     'opponent',
+    'seed',
+    'opponent_seed',
     'home_away',
     'home',
     'away',
@@ -113,6 +111,6 @@ fields = [
 ]
 
 with open('games.tsv', 'wt', newline = '', encoding = 'utf-8') as f:
-    writer = csv.DictWriter(f, fields, dialect = 'excel-tab', extrasaction = 'ignore')
+    writer = csv.DictWriter(f, fields, dialect = 'excel-tab')
     writer.writeheader()
     writer.writerows(games)
