@@ -225,13 +225,12 @@ d3.tsv('../data/games.tsv', function(error, games) {
         Saturday: 6,
     };
 
-    var avgFormat = d3.format('.3f');
-
     var cf = crossfilter(games);
 
     var chartWidth = $('#filters').width();
     var chartMargins = {top: 0, right: 10, bottom: 30, left: 10};
     var barHeight = 20;
+    var avgFormat = d3.format('.3f');
 
     var reducer = reductio()
         .avg(function(d) {
