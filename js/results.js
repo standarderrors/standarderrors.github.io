@@ -17,6 +17,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
         d.new_date = moment(d.new_date, 'YYYY-MM-DD');
         d.next = false;
 
+        d.month = d.date.format('MMMM');
+        d.weekday = d.date.format('dddd');
+
         d.regularSeason = parseBool(d.regular_season);
         d.playoffs = parseBool(d.playoffs);
         d.played = parseBool(d.played);
@@ -28,6 +31,16 @@ d3.tsv('../data/games.tsv', function(error, games) {
         d.loss = parseBool(d.loss);
         d.tie = parseBool(d.tie);
         d.forfeit = parseBool(d.forfeit);
+
+        if (d.win === true) d.win01 = 1;
+        else if (d.win === false) d.win01 = 0;
+        else d.win01 = null;
+
+        if (d.home_away === '') {
+            d.home_away = 'not recorded';
+        }
+
+        d.overall = 'Overall';
     });
 
     var seasonGames = d3.nest()
@@ -177,4 +190,113 @@ d3.tsv('../data/games.tsv', function(error, games) {
             });
         })
     ;
+
+
+    //----------------------------------------------------------------------
+    // Create charts for filtering the game list.
+
+    d3.select('#filters')
+        .append('h1')
+        .text('Filters / Splits')
+    ;
+
+    var monthOrder = {
+        January: 0,
+        February: 1,
+        March: 2,
+        April: 3,
+        May: 4,
+        June: 5,
+        July: 6,
+        August: 7,
+        September: 8,
+        October: 9,
+        November: 10,
+        December: 11,
+    };
+
+    var weekdayOrder = {
+        Sunday: 0,
+        Monday: 1,
+        Tuesday: 2,
+        Wednesday: 3,
+        Thursday: 4,
+        Friday: 5,
+        Saturday: 6,
+    };
+
+    var avgFormat = d3.format('.3f');
+
+    var cf = crossfilter(games);
+
+    var chartWidth = $('#filters').width();
+    var chartMargins = {top: 0, right: 10, bottom: 30, left: 10};
+    var barHeight = 20;
+
+    var reducer = reductio()
+        .avg(function(d) {
+            if (d.win) return 1;
+            if (d.loss) return 0;
+            return null;
+        })
+    ;
+
+    var reducer = reductio()
+        .filter(function(d) { return d.win01 !== null; })
+        .avg('win01')
+    ;
+
+    function addChart(field, options) {
+        if (options === undefined) options = {};
+
+        var divId = 'chart-' + field;
+        var div = d3.select('#filters').append('div');
+        var dim = cf.dimension(function(d) { return d[field]; });
+        var group = reducer(dim.group());
+        var chart = dc.rowChart(div.node());
+        chart
+            .width(chartWidth)
+            .height(chartMargins.bottom + group.size() * barHeight + (group.size() + 1) * chart.gap())
+            .dimension(dim)
+            .group(group)
+            .valueAccessor(function(d) {
+                return d.value.avg;
+            })
+            .renderLabel(true)
+            .title(function(d) {
+                var title = d.value.sum + ' wins';
+                title += ', ' + (d.value.count - d.value.sum) + ' losses';
+                title += ', ' + avgFormat(d.value.avg);
+                return title;
+            })
+            .elasticX(true)
+            .margins(chartMargins)
+        ;
+        if (options.label) {
+            chart.label(options.label);
+        }
+        if (options.order) {
+            chart.ordering(options.order);
+        }
+    }
+
+    addChart('overall');
+    addChart('status');
+    addChart('home_away');
+    addChart('opponent');
+    addChart('stage');
+    addChart('year');
+    addChart('month', {
+        order: function(d) {
+            return monthOrder[d.key];
+        }
+    });
+    addChart('weekday', {
+        order: function(d) {
+            return weekdayOrder[d.key];
+        }
+    });
+    addChart('forfeit');
+
+    dc.renderAll();
 });
