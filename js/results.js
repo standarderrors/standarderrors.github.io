@@ -269,9 +269,17 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 title += ', ' + avgFormat(d.value.avg);
                 return title;
             })
-            .elasticX(true)
             .margins(chartMargins)
         ;
+
+        // Force the x-axis domain to be [0,1]. We also have to explicitly
+        // specify the range, because it defaults to [0,1].
+        chart.x(
+            d3.scale.linear()
+                .domain([0, 1])
+                .range([0, chart.width() - chartMargins.left])
+        );
+
         if (options.label) {
             chart.label(options.label);
         }
