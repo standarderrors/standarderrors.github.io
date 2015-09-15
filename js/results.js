@@ -242,14 +242,6 @@ d3.tsv('../data/games.tsv', function(error, games) {
     var avgFormat = d3.format('.3f');
 
     var reducer = reductio()
-        .avg(function(d) {
-            if (d.win) return 1;
-            if (d.loss) return 0;
-            return null;
-        })
-    ;
-
-    var reducer = reductio()
         .filter(function(d) { return d.win01 !== null; })
         .avg('win01')
     ;
