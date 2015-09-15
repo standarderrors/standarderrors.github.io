@@ -307,10 +307,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
     }
 
     addChart('overall');
-    addChart('status');
-    addChart('home_away');
-    addChart('opponent');
     addChart('stage');
+    addChart('opponent');
+    addChart('home_away');
     addChart('year');
     addChart('month', {
         order: function(d) {
@@ -322,6 +321,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             return weekdayOrder[d.key];
         }
     });
+    addChart('status');
 
     dc.renderAll();
 });
