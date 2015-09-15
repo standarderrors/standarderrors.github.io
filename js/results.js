@@ -307,10 +307,26 @@ d3.tsv('../data/games.tsv', function(error, games) {
     }
 
     addChart('overall');
-    addChart('stage');
+    addChart('stage', {
+        order: function(d) {
+            if (d.key === 'regular season') return 1;
+            else if (d.key === 'playoffs') return 2;
+            return 9;
+        }
+    });
     addChart('opponent');
-    addChart('home_away');
-    addChart('year');
+    addChart('home_away', {
+        order: function(d) {
+            if (d.key === 'home') return 1;
+            else if (d.key === 'away') return 2;
+            return 9;
+        }
+    });
+    addChart('year', {
+        order: function(d) {
+            return -d.key;
+        }
+    });
     addChart('month', {
         order: function(d) {
             return monthOrder[d.key];
@@ -321,7 +337,15 @@ d3.tsv('../data/games.tsv', function(error, games) {
             return weekdayOrder[d.key];
         }
     });
-    addChart('status');
+    addChart('status', {
+        order: function(d) {
+            if (d.key === 'played') return 1;
+            else if (d.key === 'forfeited') return 2;
+            else if (d.key === 'postponed') return 3;
+            else if (d.key === 'future') return 4;
+            return 9;
+        }
+    });
 
     dc.renderAll();
 });
