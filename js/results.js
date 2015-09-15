@@ -103,6 +103,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
             return d.postponed;
         })
         .classed('row', true)
+        .each(function(d) {
+            d.li = this;
+        })
     ;
 
     game
@@ -167,6 +170,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             }
         })
     ;
+
 
     //----------------------------------------------------------------------
     // Add an icon with a tooltip for any game result notes.
@@ -285,6 +289,16 @@ d3.tsv('../data/games.tsv', function(error, games) {
         if (options.order) {
             chart.ordering(options.order);
         }
+
+        chart.on('filtered', function(chart) {
+            filteredGames = dim.top(Infinity);
+            games.forEach(function(d) {
+                d3.select(d.li).classed('hidden', true);
+            });
+            filteredGames.forEach(function(d) {
+                d3.select(d.li).classed('hidden', false);
+            });
+        });
     }
 
     addChart('overall');
