@@ -36,6 +36,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
         else if (d.win === false) d.win01 = 0;
         else d.win01 = null;
 
+        if (d.forfeit) {
+            d.status = 'forfeited';
+            d.played = false;
+        }
+
         if (d.home_away === '') {
             d.home_away = 'not recorded';
         }
@@ -91,7 +96,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
         .append('li')
         .classed('game', true)
         .classed('played', function(d) {
-            return d.played;
+            return d.played || d.forfeit;
         })
         .classed('win', function(d) {
             return d.win;
@@ -141,7 +146,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
         .classed('col-xs-12', true)
         .classed('col-sm-3', true)
         .html(function(d) {
-            if (d.played) {
+            if (d.played || d.forfeit) {
                 var result = '';
                 if (d.win) {
                     result += 'W, ';
@@ -317,7 +322,6 @@ d3.tsv('../data/games.tsv', function(error, games) {
             return weekdayOrder[d.key];
         }
     });
-    addChart('forfeit');
 
     dc.renderAll();
 });
