@@ -264,8 +264,8 @@ d3.tsv('../data/games.tsv', function(error, games) {
             })
             .renderLabel(true)
             .title(function(d) {
-                var title = d.value.sum + ' wins';
-                title += ', ' + (d.value.count - d.value.sum) + ' losses';
+                var title = d.value.sum + ' W';
+                title += ', ' + (d.value.count - d.value.sum) + ' L';
                 title += ', ' + avgFormat(d.value.avg);
                 return title;
             })
