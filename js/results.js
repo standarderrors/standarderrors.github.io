@@ -304,6 +304,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
             if (d.key === 'regular season') return 1;
             else if (d.key === 'playoffs') return 2;
             return 9;
+        },
+        label: function(d) {
+            return d.key.replace(/\b\w/g, function(m) {
+                return m.toUpperCase();
+            });
         }
     });
     addChart('opponent');
@@ -312,6 +317,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
             if (d.key === 'home') return 1;
             else if (d.key === 'away') return 2;
             return 9;
+        },
+        label: function(d) {
+            return d.key.replace(/\b\w/g, function(m) {
+                return m.toUpperCase();
+            });
         }
     });
     addChart('year', {
@@ -336,6 +346,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
             else if (d.key === 'postponed') return 3;
             else if (d.key === 'future') return 4;
             return 9;
+        },
+        label: function(d) {
+            return d.key.replace(/\b\w/g, function(m) {
+                return m.toUpperCase();
+            });
         }
     });
 
