@@ -210,4 +210,6 @@ year	month	day	opponent	playoffs	seed	opponent_seed	home_away	postponed	resched_
 2015	7	30	Corn Wallaces				a				w		21	4	4 innings, mercy rule
 2015	8	5	PHRD Sox				h				w		23	0	4 innings, mercy rule
 2015	8	18	Chuck Norris All-Stars				h				w		21	16	
-2015	8	25	Loose Cannons				a								
+2015	8	25	Loose Cannons				a				l		11	12	
+2015	9	10	Corn Wallaces	y	2	3	h				w	y	7	0	
+2015	9	17	Chuck Norris All-Stars	y	2	4	h								
