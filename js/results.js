@@ -205,7 +205,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
     // Create charts for filtering the game list.
 
     d3.select('#filters')
-        .append('h1')
+        .insert('h1', ':first-child')
         .text('Filters / Splits')
     ;
 
@@ -259,9 +259,6 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .height(chartMargins.bottom + group.size() * barHeight + (group.size() + 1) * chart.gap())
             .dimension(dim)
             .group(group)
-            .valueAccessor(function(d) {
-                return d.value.avg;
-            })
             .renderLabel(true)
             .title(function(d) {
                 var title = d.value.sum + ' W';
@@ -271,14 +268,6 @@ d3.tsv('../data/games.tsv', function(error, games) {
             })
             .margins(chartMargins)
         ;
-
-        // Force the x-axis domain to be [0,1]. We also have to explicitly
-        // specify the range, because it defaults to [0,1].
-        chart.x(
-            d3.scale.linear()
-                .domain([0, 1])
-                .range([0, chart.width() - chartMargins.left])
-        );
 
         if (options.label) {
             chart.label(options.label);
@@ -296,10 +285,13 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 d3.select(d.li).classed('hidden', false);
             });
         });
+
+        return chart;
     }
 
-    addChart('overall');
-    addChart('stage', {
+    var charts = [];
+    charts.push(addChart('overall'));
+    charts.push(addChart('stage', {
         order: function(d) {
             if (d.key === 'regular season') return 1;
             else if (d.key === 'playoffs') return 2;
@@ -310,9 +302,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 return m.toUpperCase();
             });
         }
-    });
-    addChart('opponent');
-    addChart('home_away', {
+    }));
+    charts.push(addChart('opponent'));
+    charts.push(addChart('home_away', {
         order: function(d) {
             if (d.key === 'home') return 1;
             else if (d.key === 'away') return 2;
@@ -323,23 +315,23 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 return m.toUpperCase();
             });
         }
-    });
-    addChart('year', {
+    }));
+    charts.push(addChart('year', {
         order: function(d) {
             return -d.key;
         }
-    });
-    addChart('month', {
+    }));
+    charts.push(addChart('month', {
         order: function(d) {
             return monthOrder[d.key];
         }
-    });
-    addChart('weekday', {
+    }));
+    charts.push(addChart('weekday', {
         order: function(d) {
             return weekdayOrder[d.key];
         }
-    });
-    addChart('status', {
+    }));
+    charts.push(addChart('status', {
         order: function(d) {
             if (d.key === 'played') return 1;
             else if (d.key === 'forfeited') return 2;
@@ -352,7 +344,45 @@ d3.tsv('../data/games.tsv', function(error, games) {
                 return m.toUpperCase();
             });
         }
+    }));
+
+    function chartWinPct() {
+        charts.forEach(function(chart) {
+            chart.valueAccessor(function(d) {
+                return d.value.avg;
+            })
+            .elasticX(false)
+            ;
+
+            // Force the x-axis domain to be [0,1]. We also have to explicitly
+            // specify the range, because it defaults to [0,1].
+            chart.x(
+                d3.scale.linear()
+                    .domain([0, 1])
+                    .range([0, chart.width() - chartMargins.left])
+            );
+        });
+    }
+
+    function chartNumGames() {
+        charts.forEach(function(chart) {
+            chart.valueAccessor(function(d) {
+                return d.value.count;
+            })
+            .elasticX(true)
+            ;
+        });
+    }
+
+    $('#stat-pct').on('click', function(event) {
+        chartWinPct();
+        dc.renderAll();
     });
 
-    dc.renderAll();
+    $('#stat-num').on('click', function(event) {
+        chartNumGames();
+        dc.renderAll();
+    });
+
+    $('#stat-pct').trigger('click');
 });

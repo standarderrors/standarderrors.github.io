@@ -23,3 +23,17 @@
     /* padding-left looks best when it matches the charts' left margin. */
     padding-left: 10px;
 }
+
+#filters .control {
+    padding-bottom: 10px;
+    /* padding-left looks best when it matches the charts' left margin. */
+    padding-left: 10px;
+}
+
+#filters label {
+    padding-left: 1em;
+    /* Bootstrap adds margins to the bottom of labels. */
+    margin-bottom: 0;
+    /* Bootstrap makes labels bold. */
+    font-weight: normal;
+}
