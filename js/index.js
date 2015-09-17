@@ -162,7 +162,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
 
     addGameList(function(d) { return d.next; }, 'next-game', 'Next Game');
     addGameList(function(d) { return d.regularSeason; }, 'regular-season', 'Regular Season ' + currentYear);
-    addGameList(function(d) { return d.playoffs; }, 'playoffs', 'Playoffs');
+    addGameList(function(d) { return d.playoffs; }, 'playoffs', 'Playoffs ' + currentYear);
 
 
     //--------------------------------------------------------------------------
