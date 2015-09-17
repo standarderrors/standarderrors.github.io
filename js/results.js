@@ -1,4 +1,9 @@
-d3.tsv('../data/games.tsv', function(error, games) {
+var q = queue()
+    .defer(d3.tsv, '../data/games.tsv')
+    .defer(d3.tsv, '../data/teams.tsv')
+;
+
+q.await(function(error, games, teams) {
     // Function to convert true/false string values to booleans.
     function parseBool(s) {
         if (typeof s === 'string') {
@@ -11,6 +16,24 @@ d3.tsv('../data/games.tsv', function(error, games) {
         }
         return s;
     }
+
+    // Create data structures holding information about team name changes.
+
+    var teamNormalizer = {};
+    var teamAliases = {};
+
+    teams.forEach(function(t) {
+        teamNormalizer[t.team] = t.team_normalized;
+
+        if (!(t.team_normalized in teamAliases)) {
+            teamAliases[t.team_normalized] = [];
+        }
+        if (t.team !== t.team_normalized) {
+            if (teamAliases[t.team_normalized].indexOf(t.team) === -1) {
+                teamAliases[t.team_normalized].push(t.team);
+            }
+        }
+    });
 
     games.forEach(function(d) {
         d.date = moment(d.date, 'YYYY-MM-DD');
@@ -31,6 +54,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
         d.loss = parseBool(d.loss);
         d.tie = parseBool(d.tie);
         d.forfeit = parseBool(d.forfeit);
+
+        d.opponentNormalized = teamNormalizer[d.opponent];
+        d.opponentAliases = teamAliases[d.opponentNormalized];
 
         if (d.win === true) d.win01 = 1;
         else if (d.win === false) d.win01 = 0;
@@ -311,7 +337,14 @@ d3.tsv('../data/games.tsv', function(error, games) {
             });
         }
     }));
-    charts.push(addChart('opponent'));
+    charts.push(addChart('opponentNormalized', {
+        label: function(d) {
+            if (teamAliases[d.key].length > 0) {
+                return d.key + ' (' + teamAliases[d.key].join(', ') + ')';
+            }
+            return d.key;
+        }
+    }));
     charts.push(addChart('home_away', {
         order: function(d) {
             if (d.key === 'home') return 1;
