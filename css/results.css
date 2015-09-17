@@ -26,8 +26,7 @@
 
 #filters .control {
     padding-bottom: 10px;
-    /* padding-left looks best when it matches the charts' left margin. */
-    padding-left: 10px;
+    text-align: right;
 }
 
 #filters label {
@@ -36,4 +35,17 @@
     margin-bottom: 0;
     /* Bootstrap makes labels bold. */
     font-weight: normal;
+}
+
+#reset-control {
+    visibility: hidden;
+}
+
+#filters .button {
+    color: rgb(107,67,205);
+    background-color: rgb(238,238,238);
+    cursor: pointer;
+    border: 1px solid rgb(107,67,205);
+    border-radius: 4px;
+    padding: 2px 4px;
 }

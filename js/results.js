@@ -246,6 +246,8 @@ d3.tsv('../data/games.tsv', function(error, games) {
         .avg('win01')
     ;
 
+    var filters = {};
+
     function addChart(field, options) {
         if (options === undefined) options = {};
 
@@ -284,6 +286,12 @@ d3.tsv('../data/games.tsv', function(error, games) {
             filteredGames.forEach(function(d) {
                 d3.select(d.li).classed('hidden', false);
             });
+
+            filters[chart.anchorName()] = chart.filters();
+            var filteredCharts = d3.keys(filters).filter(function(c) {
+                return filters[c].length > 0;
+            });
+            $('#reset-control').css('visibility', filteredCharts.length > 0 ? 'visible' : 'hidden');
         });
 
         return chart;
@@ -382,6 +390,12 @@ d3.tsv('../data/games.tsv', function(error, games) {
     $('#stat-num').on('click', function(event) {
         chartNumGames();
         dc.renderAll();
+    });
+
+    $('#reset-button').on('click', function(event) {
+        dc.filterAll();
+        dc.renderAll();
+        $('#reset-control').css('visibility', 'hidden');
     });
 
     $('#stat-pct').trigger('click');
