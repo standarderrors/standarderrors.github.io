@@ -97,6 +97,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .classed('col-sm-6', true)
             .html(function(d) {
                 var opponent = d.opponent;
+                if (d.playoffs && d.opponent_seed !== '') {
+                    opponent = '(' + d.opponent_seed + ') ' + opponent;
+                }
                 if (d.away) {
                     opponent = '@ ' + opponent;
                 }

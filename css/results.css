@@ -1,0 +1,51 @@
+.season {
+    margin-bottom: 50px;
+}
+
+.dc-chart g.row rect {
+    fill: rgb(144,113,217);
+}
+
+.dc-chart g.row rect.deselected {
+    fill: #cccccc;
+}
+
+.dc-chart g.row text {
+    fill: rgb(0,0,0);
+}
+
+/* Keep this in sync with the #schedule h1 rule. */
+#filters h1 {
+    color: #777777;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* padding-left looks best when it matches the charts' left margin. */
+    padding-left: 10px;
+}
+
+#filters .control {
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+#filters label {
+    padding-left: 1em;
+    /* Bootstrap adds margins to the bottom of labels. */
+    margin-bottom: 0;
+    /* Bootstrap makes labels bold. */
+    font-weight: normal;
+}
+
+#reset-control {
+    visibility: hidden;
+}
+
+#filters .button {
+    color: rgb(107,67,205);
+    background-color: rgb(238,238,238);
+    cursor: pointer;
+    border: 1px solid rgb(107,67,205);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
