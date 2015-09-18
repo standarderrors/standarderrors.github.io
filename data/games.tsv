@@ -212,4 +212,5 @@ year	date	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_away	ho
 2015	2015-08-18	regular season	True	False	Chuck Norris All-Stars			home	True	False	played	True	False	False		win	True	False	False	False	21	16	
 2015	2015-08-25	regular season	True	False	Loose Cannons			away	False	True	played	True	False	False		loss	False	True	False	False	11	12	
 2015	2015-09-10	playoffs	False	True	Corn Wallaces	2	3	home	True	False	played	True	False	False		win	True	False	False	True	7	0	
-2015	2015-09-17	playoffs	False	True	Chuck Norris All-Stars	2	4	home	True	False	future	False	False	True									
+2015	2015-09-17	playoffs	False	True	Chuck Norris All-Stars	2	4	home	True	False	played	True	False	False		loss	False	True	False	False	18	20	
+2015	2015-09-23	playoffs	False	True	TBD						future	False	False	True									
