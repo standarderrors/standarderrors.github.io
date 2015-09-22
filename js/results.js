@@ -71,6 +71,27 @@ q.await(function(error, games, teams) {
             d.home_away = 'not recorded';
         }
 
+        d.runs_scored = +d.runs_scored;
+        d.runs_allowed = +d.runs_allowed;
+
+        if (d.played) {
+            if (d.runs_scored <= 4) d.runsScoredCat = 'Scored 0-4';
+            else if (d.runs_scored <= 9) d.runsScoredCat = 'Scored 5-9';
+            else if (d.runs_scored <= 14) d.runsScoredCat = 'Scored 10-14';
+            else if (d.runs_scored <= 19) d.runsScoredCat = 'Scored 15-19';
+            else if (d.runs_scored >= 20) d.runsScoredCat = 'Scored 20+';
+
+            if (d.runs_allowed <= 4) d.runsAllowedCat = 'Allowed 0-4';
+            else if (d.runs_allowed <= 9) d.runsAllowedCat = 'Allowed 5-9';
+            else if (d.runs_allowed <= 14) d.runsAllowedCat = 'Allowed 10-14';
+            else if (d.runs_allowed <= 19) d.runsAllowedCat = 'Allowed 15-19';
+            else if (d.runs_allowed >= 20) d.runsAllowedCat = 'Allowed 20+';
+        }
+        else {
+            d.runsScoredCat = 'Not Applicable';
+            d.runsAllowedCat = 'Not Applicable';
+        }
+
         d.overall = 'Overall';
     });
 
@@ -355,6 +376,26 @@ q.await(function(error, games, teams) {
             return d.key.replace(/\b\w/g, function(m) {
                 return m.toUpperCase();
             });
+        }
+    }));
+    charts.push(addChart('runsScoredCat', {
+        order: function(d) {
+            if (d.key === 'Scored 0-4') return 1;
+            else if (d.key === 'Scored 5-9') return 2;
+            else if (d.key === 'Scored 10-14') return 3;
+            else if (d.key === 'Scored 15-19') return 4;
+            else if (d.key === 'Scored 20+') return 5;
+            return 9;
+        }
+    }));
+    charts.push(addChart('runsAllowedCat', {
+        order: function(d) {
+            if (d.key === 'Allowed 0-4') return 1;
+            else if (d.key === 'Allowed 5-9') return 2;
+            else if (d.key === 'Allowed 10-14') return 3;
+            else if (d.key === 'Allowed 15-19') return 4;
+            else if (d.key === 'Allowed 20+') return 5;
+            return 9;
         }
     }));
     charts.push(addChart('year', {
