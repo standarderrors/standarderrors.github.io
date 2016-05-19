@@ -29,11 +29,12 @@ d3.tsv('../data/games.tsv', function(error, games) {
         d.forfeit = parseBool(d.forfeit);
     });
 
-    var now = moment();
-    var currentYear = String(now.year());
+    var currentYear = d3.max(games, function(d) {
+        return d.date.year();
+    });
     var currentGames = games
         .filter(function(d) {
-            return d.year === currentYear && !d.postponed;
+            return d.date.year() === currentYear && !d.postponed;
         })
         .sort(function(a, b) {
             return d3.ascending(a.date, b.date);
