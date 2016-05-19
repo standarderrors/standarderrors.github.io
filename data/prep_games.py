@@ -55,7 +55,7 @@ for i in input:
     elif g['postponed']: g['status'] = 'postponed'
     elif g['future']: g['status'] = 'future'
 
-    if g['postponed']:
+    if g['postponed'] and i['resched_month'] != '' and i['resched_day'] != '':
         g['new_date'] = datetime.date(int(i['year']), int(i['resched_month']), int(i['resched_day']))
     else:
         g['new_date'] = None

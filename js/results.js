@@ -234,7 +234,8 @@ q.await(function(error, games, teams) {
         .attr('data-toggle', 'tooltip')
         .attr('title', function(d) {
             if (d.postponed) {
-                return d.note + ', postponed to ' + d.new_date.format('MMM D');
+                if (d.new_date.isValid()) return d.note + ', postponed to ' + d.new_date.format('MMM D');
+                return d.note + ', postponed';
             }
             return d.note;
         })
