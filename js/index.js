@@ -41,8 +41,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
         })
     ;
 
+    var now = moment();
     var futureGames = currentGames.filter(function(d) {
-        return d.future;
+        return d.future && d.date.isSameOrAfter(now, 'day');
     });
     if (futureGames.length > 0) {
         futureGames[0].next = true;
