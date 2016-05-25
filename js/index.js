@@ -14,6 +14,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
 
     games.forEach(function(d) {
         d.date = moment(d.date, 'YYYY-MM-DD');
+        d.new_date = moment(d.new_date, 'YYYY-MM-DD');
         d.next = false;
 
         d.regularSeason = parseBool(d.regular_season);
@@ -34,7 +35,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
     });
     var currentGames = games
         .filter(function(d) {
-            return d.date.year() === currentYear && !d.postponed;
+            return d.date.year() === currentYear;
         })
         .sort(function(a, b) {
             return d3.ascending(a.date, b.date);
@@ -76,6 +77,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
             })
             .classed('loss', function(d) {
                 return d.loss;
+            })
+            .classed('postponed', function(d) {
+                return d.postponed;
             })
             .classed('next', function(d) {
                 return d.next;
@@ -150,6 +154,10 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .attr('class', 'info-icon glyphicon glyphicon-info-sign')
             .attr('data-toggle', 'tooltip')
             .attr('title', function(d) {
+            if (d.postponed) {
+                if (d.new_date.isValid()) return d.note + ', postponed to ' + d.new_date.format('MMM D');
+                return d.note + ', postponed';
+            }
                 return d.note;
             })
             .each(function() {
