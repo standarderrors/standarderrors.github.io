@@ -216,7 +216,7 @@ year	date	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_away	ho
 2015	2015-09-23	playoffs	False	True	Loose Cannons	2	1	away	False	True	played	True	False	False		loss	False	True	False	False	9	18	
 2016	2016-05-10	regular season	True	False	Ochos			away	False	True	played	True	False	False		win	True	False	False	False	12	10	8 innings
 2016	2016-05-17	regular season	True	False	bandITS			home	True	False	postponed	False	True	False									rain
-2016	2016-05-24	regular season	True	False	Sudden Impact			away	False	True	future	False	False	True									
+2016	2016-05-24	regular season	True	False	Sudden Impact			away	False	True	played	True	False	False		win	True	False	False	False	23	6	6 innings, mercy rule
 2016	2016-06-08	regular season	True	False	PHRD Sox			home	True	False	future	False	False	True									
 2016	2016-06-22	regular season	True	False	Toxic Waste			away	False	True	future	False	False	True									
 2016	2016-06-30	regular season	True	False	Corn Wallaces			away	False	True	future	False	False	True									
