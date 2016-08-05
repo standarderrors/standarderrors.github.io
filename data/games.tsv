@@ -224,6 +224,6 @@ year	date	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_away	ho
 2016	2016-07-06	regular season	True	False	Toxic Waste			away	False	True	played	True	False	False		loss	False	True	False	False	21	22	
 2016	2016-07-20	regular season	True	False	Loose Cannons			home	True	False	played	True	False	False		loss	False	True	False	False	3	14	
 2016	2016-07-27	regular season	True	False	Ochos			home	True	False	played	True	False	False		win	True	False	False	False	9	6	
-2016	2016-08-04	regular season	True	False	Sudden Impact			home	True	False	future	False	False	True									
+2016	2016-08-04	regular season	True	False	Sudden Impact			home	True	False	played	True	False	False		win	True	False	False	True	7	0	
 2016	2016-08-10	regular season	True	False	bandITS			away	False	True	future	False	False	True									game 1
 2016	2016-08-10	regular season	True	False	bandITS			away	False	True	future	False	False	True									game 2
