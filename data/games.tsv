@@ -232,15 +232,17 @@ year	date	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_away	ho
 2016	2016-09-08	playoffs	False	True	Ochos	2	4	home	True	False	played	True	False	False		win	True	False	False	False	19	7	5 innings, mercy rule
 2016	2016-09-12	playoffs	False	True	bandITS	2	3	home	True	False	played	True	False	False		win	True	False	False	False	17	5	5 innings, mercy rule
 2016	2016-09-13	playoffs	False	True	Loose Cannons	2	1	away	False	True	played	True	False	False		loss	False	True	False	False	11	17	
-2017	2017-05-17	regular season	True	False	Sudden Impact			away	False	True	future	False	False	True									
-2017	2017-05-24	regular season	True	False	Toxic Waste			home	True	False	future	False	False	True									
+2017	2017-05-17	regular season	True	False	Sudden Impact			away	False	True	postponed	False	True	False	2017-06-12								too few players
+2017	2017-05-24	regular season	True	False	Toxic Waste			home	True	False	postponed	False	True	False	2017-07-26								rain
 2017	2017-05-31	regular season	True	False	Corn Wallaces			away	False	True	future	False	False	True									
 2017	2017-06-08	regular season	True	False	Ochos			away	False	True	future	False	False	True									
+2017	2017-06-12	regular season	True	False	Sudden Impact			away	False	True	future	False	False	True									
 2017	2017-06-13	regular season	True	False	Loose Cannons			away	False	True	future	False	False	True									
 2017	2017-06-22	regular season	True	False	bandITS			home	True	False	future	False	False	True									
 2017	2017-07-11	regular season	True	False	Corn Wallaces			home	True	False	future	False	False	True									
 2017	2017-07-19	regular season	True	False	Sudden Impact			home	True	False	future	False	False	True									
-2017	2017-07-26	regular season	True	False	Toxic Waste			away	False	True	future	False	False	True									
+2017	2017-07-26	regular season	True	False	Toxic Waste			away	False	True	future	False	False	True									doubleheader, game 2
+2017	2017-07-26	regular season	True	False	Toxic Waste			home	True	False	future	False	False	True									doubleheader, game 1
 2017	2017-08-03	regular season	True	False	Ochos			home	True	False	future	False	False	True									
 2017	2017-08-08	regular season	True	False	Loose Cannons			home	True	False	future	False	False	True									
 2017	2017-08-17	regular season	True	False	bandITS			away	False	True	future	False	False	True									
