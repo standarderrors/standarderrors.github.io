@@ -36,12 +36,12 @@ q.await(function(error, games, teams) {
     });
 
     games.forEach(function(d) {
-        d.date = moment(d.date, 'YYYY-MM-DD');
+        d.datetime = moment(d.datetime, 'YYYY-MM-DD HH:mm:ss');
         d.new_date = moment(d.new_date, 'YYYY-MM-DD');
         d.next = false;
 
-        d.month = d.date.format('MMMM');
-        d.weekday = d.date.format('dddd');
+        d.month = d.datetime.format('MMMM');
+        d.weekday = d.datetime.format('dddd');
 
         d.regularSeason = parseBool(d.regular_season);
         d.playoffs = parseBool(d.playoffs);
@@ -105,7 +105,7 @@ q.await(function(error, games, teams) {
             return 1;
         })
         .sortValues(function(a, b) {
-            return d3.ascending(a.date, b.date);
+            return d3.ascending(a.datetime, b.datetime);
         })
         .entries(games)
     ;
@@ -166,7 +166,7 @@ q.await(function(error, games, teams) {
         .classed('col-xs-12', true)
         .classed('col-sm-3', true)
         .html(function(d) {
-            return d.date.format('ddd, MMM D');
+            return d.datetime.format('ddd, MMM D');
         })
     ;
 
@@ -218,7 +218,7 @@ q.await(function(error, games, teams) {
                 return 'PPD';
             }
             else {
-                return '5:30pm';
+                return d.datetime.format('h:mma');
             }
         })
     ;

@@ -25,7 +25,13 @@ for i in input:
     g = {}
 
     g['year'] = int(i['year'])
-    g['date'] = datetime.date(int(i['year']), int(i['month']), int(i['day']))
+    g['datetime'] = datetime.datetime(
+        year = int(i['year']),
+        month = int(i['month']),
+        day = int(i['day']),
+        hour = int(i['hour']),
+        minute = int(i['minute']),
+    )
 
     g['opponent'] = i['opponent']
 
@@ -81,11 +87,11 @@ for i in input:
 
     games.append(g)
 
-games = sorted(games, key = lambda g: g['date'])
+games = sorted(games, key = lambda g: g['datetime'])
 
 fields = [
     'year',
-    'date',
+    'datetime',
     'stage',
     'regular_season',
     'playoffs',
