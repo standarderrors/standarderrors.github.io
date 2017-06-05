@@ -139,6 +139,9 @@ d3.tsv('../data/games.tsv', function(error, games) {
                     }
                     return result;
                 }
+                else if (d.postponed) {
+                    return 'PPD';
+                }
                 else {
                     return d.datetime.format('h:mma');
                 }
