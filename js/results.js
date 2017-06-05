@@ -193,7 +193,7 @@ q.await(function(error, games, teams) {
         .classed('col-xs-12', true)
         .classed('col-sm-3', true)
         .html(function(d) {
-            if (d.played || d.forfeit) {
+            if (d.played) {
                 var result = '';
                 if (d.win) {
                     result += 'W, ';
