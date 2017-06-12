@@ -235,7 +235,7 @@ year	datetime	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_awa
 2017	2017-05-17 17:45:00	regular season	True	False	Sudden Impact			away	False	True	postponed	False	True	False	2017-06-12								too few players
 2017	2017-05-24 17:45:00	regular season	True	False	Toxic Waste			home	True	False	postponed	False	True	False	2017-07-26								rain
 2017	2017-05-31 17:45:00	regular season	True	False	Corn Wallaces			away	False	True	played	True	False	False		win	True	False	False	False	20	1	5 innings, mercy rule
-2017	2017-06-08 17:45:00	regular season	True	False	Ochos			away	False	True	future	False	False	True									
+2017	2017-06-08 17:45:00	regular season	True	False	Ochos			away	False	True	played	True	False	False		win	True	False	False	False	20	10	
 2017	2017-06-12 17:45:00	regular season	True	False	Sudden Impact			away	False	True	future	False	False	True									
 2017	2017-06-13 17:45:00	regular season	True	False	Loose Cannons			away	False	True	future	False	False	True									
 2017	2017-06-22 17:45:00	regular season	True	False	bandITS			home	True	False	future	False	False	True									
