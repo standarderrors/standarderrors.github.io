@@ -67,7 +67,18 @@ q.await(function(error, roster, images) {
         })
         .enter()
         .append('li')
+        .classed('captain', function(d) {
+            return d.captain;
+        })
+        .classed('exemption', function(d) {
+            return d.exemption;
+        })
         .text(function(d) {
-            return d.name;
+            var text = d.name;
+
+            if (d.captain) text += ' ★';
+            if (d.exemption) text += ' ↲';
+
+            return text;
         })
 });
