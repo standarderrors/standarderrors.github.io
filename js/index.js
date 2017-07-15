@@ -13,7 +13,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
     }
 
     games.forEach(function(d) {
-        d.date = moment(d.date, 'YYYY-MM-DD');
+        d.datetime = moment(d.datetime, 'YYYY-MM-DD HH:mm:ss');
         d.new_date = moment(d.new_date, 'YYYY-MM-DD');
         d.next = false;
 
@@ -31,20 +31,20 @@ d3.tsv('../data/games.tsv', function(error, games) {
     });
 
     var currentYear = d3.max(games, function(d) {
-        return d.date.year();
+        return d.datetime.year();
     });
     var currentGames = games
         .filter(function(d) {
-            return d.date.year() === currentYear;
+            return d.datetime.year() === currentYear;
         })
         .sort(function(a, b) {
-            return d3.ascending(a.date, b.date);
+            return d3.ascending(a.datetime, b.datetime);
         })
     ;
 
     var now = moment();
     var futureGames = currentGames.filter(function(d) {
-        return d.future && d.date.isSameOrAfter(now, 'day');
+        return d.future && d.datetime.isSameOrAfter(now, 'day');
     });
     if (futureGames.length > 0) {
         futureGames[0].next = true;
@@ -93,7 +93,7 @@ d3.tsv('../data/games.tsv', function(error, games) {
             .classed('col-xs-12', true)
             .classed('col-sm-3', true)
             .html(function(d) {
-                return d.date.format('ddd, MMM D');
+                return d.datetime.format('ddd, MMM D');
             })
         ;
         game
@@ -139,8 +139,11 @@ d3.tsv('../data/games.tsv', function(error, games) {
                     }
                     return result;
                 }
+                else if (d.postponed) {
+                    return 'PPD';
+                }
                 else {
-                    return '5:30pm';
+                    return d.datetime.format('h:mma');
                 }
             })
         ;
