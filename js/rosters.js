@@ -19,7 +19,7 @@ q.await(function(error, roster, images) {
 
     roster.forEach(function(p) {
         p.year = +p.year;
-        p.name = p.first_name + ' ' + p.last_name_normalized;
+        p.name = p.first_name + ' ' + p.last_name;
         p.played = true;
         p.captain = parseBool(p.captain);
         p.exemption = parseBool(p.exemption);
