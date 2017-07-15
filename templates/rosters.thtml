@@ -13,8 +13,7 @@
     <div class="container">
 
         <div class="row">
-            <div id="roster-timeline" class="col-xs-12">
-                <h1>Roster Timeline</h1>
+            <div id="rosters" class="col-xs-12">
             </div>
         </div>
 

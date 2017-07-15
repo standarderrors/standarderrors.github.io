@@ -6,6 +6,8 @@ h1 {
     padding-left: 20px;
 }
 
-#roster-timeline td {
-    color: rgb(107,67,205);
+.roster-list {
+    column-width: 12rem;
+    padding-left: 0;
+    list-style-type: none;
 }
