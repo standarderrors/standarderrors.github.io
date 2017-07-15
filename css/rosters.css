@@ -1,0 +1,27 @@
+h1 {
+    color: #777777;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
+
+.roster-list {
+    column-width: 12rem;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#legend {
+    margin-top: 1rem;
+}
+
+.legend-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.legend-list li {
+    display: inline;
+    margin-left: 1rem;
+}

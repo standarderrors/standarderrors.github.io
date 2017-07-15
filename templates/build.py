@@ -8,7 +8,8 @@ env = Environment(loader = FileSystemLoader(searchpath = str(template_dir)))
 
 views = [
     'index',
-    'results'
+    'results',
+    'rosters'
 ]
 
 for view in views:
