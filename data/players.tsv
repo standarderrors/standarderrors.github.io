@@ -1,6 +1,23 @@
 year	first_name	last_name	last_name_normalized	captain	exemption
+2017	Cynthia	Bland	Bland		
+2017	Derick	Brown	Brown	1	
+2017	Sarah	Choi	Choi		
+2017	Darryl	Cooney	Cooney		
+2017	Harper	Gordek	Gordek		
+2017	Michael	Hieronymus	Hieronymus		1
+2017	Shawn	Hirsch	Hirsch		
+2017	Saki	Kinney	Kinney		
+2017	Mike	Martin	Martin		
+2017	Alyson	Miller	Miller		
+2017	Joey	Morris	Morris		
+2017	Mike	Penne	Penne		
+2017	Jeremy	Porter	Porter		
+2017	Caroline	Scruggs	Scruggs		
+2017	Paul	Scruggs	Scruggs		
+2017	Jesse	Speer	Speer		
+2017	Carolyn	Wright	Wright		
 2016	Cynthia	Bland	Bland		
-2016	Caroline	Blanton	Blanton		
+2016	Caroline	Blanton	Scruggs		
 2016	Derick	Brown	Brown	1	
 2016	Darryl	Cooney	Cooney		
 2016	Chuck	Copello	Copello		
@@ -18,7 +35,7 @@ year	first_name	last_name	last_name_normalized	captain	exemption
 2016	Chris	Shaw	Shaw		1
 2016	Kira	Tebbe	Tebbe		
 2015	Cynthia	Bland	Bland		
-2015	Caroline	Blanton	Blanton		
+2015	Caroline	Blanton	Scruggs		
 2015	Derick	Brown	Brown	1	
 2015	Greg	Cooksey	Cooksey		
 2015	Darryl	Cooney	Cooney		
@@ -33,7 +50,7 @@ year	first_name	last_name	last_name_normalized	captain	exemption
 2015	Jessica	Roycroft	Roycroft		
 2015	Chris	Shaw	Shaw		
 2014	Cynthia	Augustine	Bland		
-2014	Caroline	Blanton	Blanton		
+2014	Caroline	Blanton	Scruggs		
 2014	Derick	Brown	Brown	1	
 2014	Greg	Cooksey	Cooksey		
 2014	Chuck	Copello	Copello		
@@ -51,7 +68,7 @@ year	first_name	last_name	last_name_normalized	captain	exemption
 2014	Paul	Scruggs	Scruggs		1
 2014	Chris	Shaw	Shaw		
 2014	Paxton	Syrek	Syrek		
-2013	Caroline	Blanton	Blanton		
+2013	Caroline	Blanton	Scruggs		
 2013	Derick	Brown	Brown		
 2013	Chuck	Copello	Copello		
 2013	Liz	Copello	Copello	1	
@@ -70,7 +87,7 @@ year	first_name	last_name	last_name_normalized	captain	exemption
 2013	Sharoni	Rotondo	Rotondo		
 2013	Jessica	Roycroft	Roycroft		
 2013	Chris	Shaw	Shaw		
-2012	Caroline	Blanton	Blanton		
+2012	Caroline	Blanton	Scruggs		
 2012	Derick	Brown	Brown		
 2012	Chuck	Copello	Copello		
 2012	Liz	Copello	Copello	1	
@@ -91,7 +108,7 @@ year	first_name	last_name	last_name_normalized	captain	exemption
 2012	Sharoni	Rotondo	Rotondo		
 2012	Chris	Shaw	Shaw		
 2011	Joanne	Arsenault	Arsenault		
-2011	Caroline	Blanton	Blanton		
+2011	Caroline	Blanton	Scruggs		
 2011	Stephanie	Bruns	Bruns		
 2011	Chuck	Copello	Copello		
 2011	Liz	Copello	Copello	1	
