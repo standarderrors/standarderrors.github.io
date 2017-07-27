@@ -59,3 +59,7 @@
 #schedule li.postponed .info-icon {
     color: #777777;
 }
+
+#schedule li.next .info-icon {
+    color: #e8e8e8;
+}
