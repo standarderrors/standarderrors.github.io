@@ -244,5 +244,6 @@ year	datetime	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_awa
 2017	2017-07-26 17:45:00	regular season	True	False	Toxic Waste			home	True	False	played	True	False	False		win	True	False	False	False	15	0	4 innings, mercy rule, doubleheader, game 1
 2017	2017-07-26 18:45:00	regular season	True	False	Toxic Waste			away	False	True	played	True	False	False		win	True	False	False	True	7	0	doubleheader, game 2
 2017	2017-08-03 17:45:00	regular season	True	False	Ochos			home	True	False	played	True	False	False		win	True	False	False	True	7	0	
-2017	2017-08-08 17:45:00	regular season	True	False	Loose Cannons			home	True	False	postponed	False	True	False									
+2017	2017-08-08 17:45:00	regular season	True	False	Loose Cannons			home	True	False	postponed	False	True	False	2017-08-18								rain
 2017	2017-08-17 17:45:00	regular season	True	False	bandITS			away	False	True	future	False	False	True									
+2017	2017-08-18 17:45:00	regular season	True	False	Loose Cannons			home	True	False	future	False	False	True									
