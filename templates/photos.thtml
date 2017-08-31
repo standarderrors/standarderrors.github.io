@@ -10,6 +10,7 @@
   <div id="photos">
 
     <ul class="subnav">
+      <li><a href="#photos_2017">2017 photos</a></li>
       <li><a href="#photos_2014">2014 photos</a></li>
       <li><a href="#photos_2007">2007 photos</a></li>
       <li><a href="#photos_2006">2006 photos</a></li>
@@ -19,6 +20,15 @@
       <li><a href="#photos_2002">2002 photos</a></li>
       <li><a href="#photos_2001">2001 photos</a></li>
     </ul>
+
+    <div class="section">
+      <h1><a name="photos_2017">2017 photos</a></h1>
+
+      <div class="image">
+        <a href="images/2017/team.jpg"><img src="images/2017/tn-team.jpg" alt="Group" width="100" height="82"></a>
+        <p class="title">Team photo after losing the title game with a shorthanded team</p>
+      </div>
+    </div>
 
     <div class="section">
       <h1><a name="photos_2014">2014 photos</a></h1>
