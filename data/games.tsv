@@ -255,8 +255,9 @@ year	datetime	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_awa
 2018	2018-06-28 17:30:00	regular season	True	False	bandITS			away	False	True	played	True	False	False		loss	False	True	False	False	17	27	6 innings, mercy rule
 2018	2018-07-10 17:30:00	regular season	True	False	Corn Wallaces			away	False	True	played	True	False	False		win	True	False	False	False	17	4	6 innings, mercy rule
 2018	2018-07-19 17:30:00	regular season	True	False	Ochos			away	False	True	played	True	False	False		win	True	False	False	False	13	12	
-2018	2018-07-31 17:30:00	regular season	True	False	Loose Cannons			home	True	False	future	False	False	True									
-2018	2018-08-08 17:30:00	regular season	True	False	Lab Rats			home	True	False	future	False	False	True									
-2018	2018-08-15 17:30:00	regular season	True	False	Toxic Waste			away	False	True	future	False	False	True									
+2018	2018-07-31 17:30:00	regular season	True	False	Loose Cannons			home	True	False	postponed	False	True	False	2018-08-27								rain
+2018	2018-08-08 17:30:00	regular season	True	False	Lab Rats			home	True	False	postponed	False	True	False									lightning, up 8-3 bottom 4th
+2018	2018-08-15 17:30:00	regular season	True	False	Toxic Waste			away	False	True	played	True	False	False		win	True	False	False	False	19	2	5 innings, mercy rule
 2018	2018-08-23 17:30:00	regular season	True	False	bandITS			home	True	False	future	False	False	True									
+2018	2018-08-27 17:30:00	regular season	True	False	Loose Cannons			home	True	False	future	False	False	True									
 2018	2018-08-28 17:30:00	regular season	True	False	Corn Wallaces			home	True	False	future	False	False	True									
