@@ -259,5 +259,5 @@ year	datetime	stage	regular_season	playoffs	opponent	seed	opponent_seed	home_awa
 2018	2018-08-08 17:30:00	regular season	True	False	Lab Rats			home	True	False	played	True	False	False		win	True	False	False	False	8	3	4 innings, lightning
 2018	2018-08-15 17:30:00	regular season	True	False	Toxic Waste			away	False	True	played	True	False	False		win	True	False	False	False	19	2	5 innings, mercy rule
 2018	2018-08-23 17:30:00	regular season	True	False	bandITS			home	True	False	played	True	False	False		win	True	False	False	False	16	15	
-2018	2018-08-27 17:30:00	regular season	True	False	Loose Cannons			home	True	False	future	False	False	True									
+2018	2018-08-27 17:30:00	regular season	True	False	Loose Cannons			home	True	False	played	True	False	False		win	True	False	False	False	5	4	
 2018	2018-08-28 17:30:00	regular season	True	False	Corn Wallaces			home	True	False	future	False	False	True									
